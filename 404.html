@@ -11,11 +11,18 @@
            </sub>
       </sub>
       <script type="text/javascript">
-          url = document.URL.split("voxelprismatic.github.io")[1]
-          a = document.getElementById("url");
-          a.innerHTML = url;
-          a.href = "/prizm.dev" + url;
-          window.location = "/prizm.dev" + url;
+         url = document.URL.split("voxelprismatic.github.io")[1]
+         a = document.getElementById("url");
+         repo = false;
+         for(var l of ["tree", "blob", "wiki", "projects"])
+            if(url.includes("/" + l + "/"))
+               repo = true
+         a.innerHTML = url;
+         if(repo)
+            a.href = "https://github.com/voxelprismatic" + url;
+         else
+            a.href = "/prizm.dev" + url;
+         window.location = a.href;
       </script>
    </body>
 </html>
