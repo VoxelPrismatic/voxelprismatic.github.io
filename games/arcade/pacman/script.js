@@ -642,7 +642,7 @@ function die() {
         global_counter = true;
         if(lives == 0) {
             grid_color("#f00");
-            $("#lives").innerHTML = "Consider supporting on <a href='/prizm.dev/re/patreon' style='color: #48f;' target='_blank'>Patreon</a>!"
+            $("#lives").innerHTML = "Consider supporting on <a href='/re/patreon' style='color: #48f;' target='_blank'>Patreon</a>!"
             message("GAME OVER", "#f00");
             window.setTimeout(() => { message("NEW GAME?", "#f00"); game_over = true; }, 5000);
             return;

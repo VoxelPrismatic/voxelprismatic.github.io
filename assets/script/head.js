@@ -1,7 +1,7 @@
 try {
     window.parent.location.host;
 } catch(err) {
-    window.parent.location = "https://voxelprismatic.github.io/prizm.dev/" + document.referrer.split("/").slice(3).join("/");
+    window.parent.location = "https://voxelprismatic.github.io/" + document.referrer.split("/").slice(3).join("/");
 }
 
 var stylesheetLoaded = false;
@@ -29,7 +29,7 @@ var elements = [
         "tag": "link",
         "rel": "icon",
         "type": "image/png",
-        "href": "/prizm.dev/assets/image/favicon.png"
+        "href": "/assets/image/favicon.png"
     }, {
         "tag": "meta",
         "name": "viewport",
@@ -41,7 +41,7 @@ var elements = [
         "tag": "link",
         "rel": "stylesheet",
         "type": "text/css",
-        "href": "/prizm.dev/assets/css/fonts.css"
+        "href": "/assets/css/fonts.css"
     }, {
         "tag": "meta",
         "property": "og:url",

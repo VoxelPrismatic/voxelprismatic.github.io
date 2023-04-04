@@ -1,15 +1,15 @@
 var url = document.URL.split("#")[0];
 var linkContent = "Home page";
-var linkHref = "/prizm.dev";
+var linkHref = "/";
 var linkTarget = "";
-if(url.endsWith("prizm.dev") || url.endsWith("prizm.dev/")) {
-    linkHref = "/prizm.dev/map";
+if(url.endsWith("voxelprismatic.github.io/")) {
+    linkHref = "/map";
     linkContent = "Site map";
     linkTarget = "";
 }
 
-if(url.endsWith("prizm.dev/map") || url.endsWith("prizm.dev/map.html")) {
-    linkHref = "https://github.com/voxelprismatic/prizm.dev/";
+if(url.endsWith("/map") || url.endsWith("/map.html")) {
+    linkHref = "https://github.com/voxelprismatic/";
     linkContent = "Website repo";
     linkTarget = "_blank";
 }

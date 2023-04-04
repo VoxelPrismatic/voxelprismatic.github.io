@@ -83,7 +83,7 @@ for(var script of scripts) {
     var elem = {
         "tag": "script",
         "type": "text/javascript",
-        "src": `/prizm.dev/assets/script/${script}.js`,
+        "src": `/assets/script/${script}.js`,
         "onload": "nextReady(this)",
         "onerror": "nextReady(this)",
         "id": `${script}.js`

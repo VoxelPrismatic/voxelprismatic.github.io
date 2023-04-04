@@ -6,7 +6,7 @@ try {
     thing = document.referrer.split("/").slice(3).join("/");
     if(thing.startsWith("@"))
         thing = "?short=" + thing.slice(1);
-    url = "https://voxelprismatic.github.io/prizm.dev/re/" + thing;
+    url = "https://voxelprismatic.github.io/re/" + thing;
     window.parent.location = url;
 }
 
@@ -43,16 +43,16 @@ function getUrl(re, block) {
         url = block[tmp] + append;
         text = tmp;
     } else {
-        url = "https://voxelprismatic.github.io/prizm.dev/418";
-        text = "http/418";
+        url = "https://voxelprismatic.github.io/404";
+        text = "http/404";
     }
     return [url, text];
 }
 
-var raw = "https://raw.githubusercontent.com/VoxelPrismatic/prizm.dev/master/assets/script/redirect/";
-var raw2 = "https://voxelprismatic.github.io/prizm.dev/assets/script/redirect/";
+var raw = "https://raw.githubusercontent.com/VoxelPrismatic/master/assets/script/redirect/";
+var raw2 = "https://voxelprismatic.github.io/assets/script/redirect/";
 
-var url = "https://voxelprismatic.github.io/prizm.dev/";
+var url = "https://voxelprismatic.github.io/";
 var uri = url;
 var text = "home";
 var URL = document.URL;

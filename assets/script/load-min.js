@@ -19,8 +19,8 @@ function checkScrollPosition() {
 }
 
 async function loadNow() {
-    globalThis.texts = await load("/prizm.dev/assets/text/footer.txt", {list: true});
-    if(document.URL.split("#")[0].split("?")[0].endsWith("/prizm.dev/")) {
+    globalThis.texts = await load("/assets/text/footer.txt", {list: true});
+    if(document.URL.split("#")[0].split("?")[0].endsWith("/")) {
         var d = new Date();
         var day = d.getDate();
         switch(d.getMonth()) {
@@ -30,7 +30,7 @@ async function loadNow() {
             case 1: // February
                 if(day == 14) {
                     swapColor("pink");
-                    $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_heart.webp";
+                    $("#truelogo").src = "/assets/image/webp/holi/priz_heart.webp";
                     $("#head").innerHTML = "LOVE ;]";
                 } else {
                     swapColor("cyan");
@@ -47,13 +47,6 @@ async function loadNow() {
                 break;
             case 5: // June
                 swapColor("cyan");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_pride.webp";
-                $("#head").innerHTML = "<span style='color:#f00'>P</span>" +
-                                       "<span style='color:#f80'>R</span>" +
-                                       "<span style='color:#ff0'>I</span>" +
-                                       "<span style='color:#0f0'>D</span>" +
-                                       "<span style='color:#08f'>E</span>" +
-                                       "<span style='color:#80f'> ;]</span>";
                 break;
             case 6: // July
                 swapColor("cyan");
@@ -66,20 +59,20 @@ async function loadNow() {
                 break;
             case 9: // October
                 swapColor("orange");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_spook.webp";
+                $("#truelogo").src = "/assets/image/webp/holi/priz_spook.webp";
                 $("#head").innerHTML = "SPOOK ;]";
                 break;
             case 10: // November
                 swapColor("cyan");
                 if(day == 11) {
-                    $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_bday.webp";
+                    $("#truelogo").src = "/assets/image/webp/holi/priz_bday.webp";
                     $("#head").innerHTML = "BDAY ;]";
                 }
                 break;
             case 11:
                 // December -- Festive
                 swapColor("cyan");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_xmas.webp";
+                $("#truelogo").src = "/assets/image/webp/holi/priz_xmas.webp";
                 $("#head").innerHTML = "FESTIVE ;]";
                 break;
             default:
@@ -310,7 +303,7 @@ function toggleDrop(elem) {
 
 var patreon_nav = `
 <nav class="sect">
-    Consider supporting me on <a href="/prizm.dev/re/patreon" target="_blank">Patreon</a>!
+    Consider supporting me on <a href="/re/patreon" target="_blank">Patreon</a>!
 </nav>`
 
 var texts = [];

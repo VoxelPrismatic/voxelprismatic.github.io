@@ -24,7 +24,7 @@ async function startLoading() {
             for(var x = 0; x < 500; x += 100)
                 window.setTimeout(scroll_, x, document.URL.split("#")[1]);
             loadFooter();
-        globalThis.texts = await load("/prizm.dev/assets/text/footer.txt", {list: true});
+        globalThis.texts = await load("/assets/text/footer.txt", {list: true});
         try {
             changeFunnyTextThing();
         } catch(err) {
@@ -43,7 +43,7 @@ async function startLoading() {
             );
             console.error(err);
             console.groupCollapsed("Loading page");
-            var html = await load("/prizm.dev/error.html");
+            var html = await load("/error.html");
             html = html.replace(/(\n|.)*\<div id="content"\>((\n|.)*?(<\/div>){2})(\n|.)*/gm, "$2");
             $("#content").innerHTML = html;
         }
@@ -73,7 +73,7 @@ function queue_links() {
     try {
         page = link_queue[0];
         if(!$("#page_source_" + page)) {
-            link = ` // <a id="page_source_${page}" target="_blank" href="https://github.com/VoxelPrismatic/prizm.dev/blob/master/assets/text/${page}.txt">View source [${page}]</a>`
+            link = ` // <a id="page_source_${page}" target="_blank" href="https://github.com/VoxelPrismatic/blob/master/assets/text/${page}.txt">View source [${page}]</a>`
             $("#links_and_sources").innerHTML += link;
         }
         link_queue = link_queue.slice(1);
@@ -87,7 +87,7 @@ function queue_links() {
 async function textPage(...pages) {
     var html = "";
     for(var page of pages) {
-        var txt = await load("/prizm.dev/assets/text/" + page + ".txt");
+        var txt = await load("/assets/text/" + page + ".txt");
         html += `<div id="${page}" class="sect">${mark_page(txt)}</div>`;
         link_queue.push(page);
         if(link_queue_ready)
