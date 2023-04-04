@@ -12,18 +12,18 @@
         <meta name="twitter:site" content="@VoxelPrismatic">
         <meta name="twitter:creator" content="@VoxelPrismatic">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="https://voxelprismatic.github.io/prizm.dev/assets/image/webp/favi/priz_blurple.webp" />
-        <meta property="og:image" content="https://voxelprismatic.github.io/prizm.dev/assets/image/favicon.png" />
+        <meta name="twitter:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_blurple.webp" />
+        <meta property="og:image" content="https://voxelprismatic.github.io/assets/image/favicon.png" />
         <meta name="theme-color" content="#0088FF">
         <meta property="og:site_name" content="PRIZ ;]">
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="256" />
         <meta property="og:image:height" content="256" />
-        <meta property="og:url" content="https://voxelprismatic.github.io/prizm.dev/" />
+        <meta property="og:url" content="https://voxelprismatic.github.io/" />
         <title>SUDOKU ;]</title>
-        <link rel="icon" type="image/png" href="/prizm.dev/assets/image/favicon.png" />
+        <link rel="icon" type="image/png" href="/assets/image/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:url" content="https://voxelprismatic.github.io/prizm.dev/games/sudoku" />
+        <meta property="og:url" content="https://voxelprismatic.github.io/games/sudoku" />
         <meta name="author" content="PRIZ ;]" />
         <style type="text/css">
             * {
@@ -210,7 +210,7 @@
         </style>
     </head>
     <body class="bgcolor" style="background-color: #122">
-        <pre id="logo" onclick="location='/prizm.dev/games/'">
+        <pre id="logo" onclick="location='/games/'">
 
 ___________________
 |     |     |     |
@@ -555,7 +555,7 @@ ___________________
             </table>
 
             <div style="text-align: center; width: 100%">
-                <div style="color:#ccc">Consider supporting me on <a href="/prizm.dev/re/patreon" target="_blank" style="color:#0ff">Patreon</a>!</div>
+                <div style="color:#ccc">Consider supporting me on <a href="/re/patreon" target="_blank" style="color:#0ff">Patreon</a>!</div>
                 <button onclick="write_cell(this)" id="n1">1<sup>0</sup></button><button onclick="write_cell(this)" id="n2">2<sup>0</sup></button><button onclick="write_cell(this)" id="n3">3<sup>0</sup></button><br>
                 <button onclick="write_cell(this)" id="n4">4<sup>0</sup></button><button onclick="write_cell(this)" id="n5">5<sup>0</sup></button><button onclick="write_cell(this)" id="n6">6<sup>0</sup></button><br>
                 <button onclick="write_cell(this)" id="n7">7<sup>0</sup></button><button onclick="write_cell(this)" id="n8">8<sup>0</sup></button><button onclick="write_cell(this)" id="n9">9<sup>0</sup></button><br>
@@ -593,13 +593,13 @@ ___________________
                 var t = Number(localStorage.getItem("__sudoku__time")) || 0;
                 used_notes = eval(localStorage.getItem("__sudoku__used_notes")) || false;
                 used_help = eval(localStorage.getItem("__sudoku__used_help")) || false;
-                
+
                 function delete_time(n) {
                     var ls = scores[localStorage.getItem("__sudoku__level") || "0"] || []
                     if(n == -2) {
                         //pass
                     } else if(n == -1) {
-                        if(confirm("Are you sure you want to delete all times?"))                           
+                        if(confirm("Are you sure you want to delete all times?"))
                            ls = [];
                     } else {
                         ls = ls.slice(0, n).concat(ls.slice(n + 1));
@@ -628,7 +628,7 @@ ___________________
                     localStorage.setItem("__sudoku__times", JSON.stringify(scores));
                 }
                 delete_time(-2);
-                
+
                 function cell_first(elem) {
                     digit_first = !digit_first
                     localStorage.setItem("__sudoku__digits", Number(digit_first))
@@ -921,7 +921,7 @@ ___________________
                             ls[n].innerHTML = ""
                         }
                     }
-                    
+
                     for(var n of $$("#notes .block td")) {
                         n.innerHTML = ""
                         n.className = ""
@@ -1104,7 +1104,7 @@ ___________________
                         }
                         $("#time").innerHTML = st;
                         alert(`Good game! Completed in ${$("#time").innerHTML}`);
-                        
+
                         if(!just_loaded && !completed) {
                             console.log("Adding score")
                             var t = $("#time").innerHTML + (used_help ? "*" : (used_notes ? "+" : ""))
@@ -1660,7 +1660,7 @@ ___________________
             </script>
         </div>
 
-            <link rel="stylesheet" type="text/css" href="/prizm.dev/assets/css/fonts.css">
+            <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">
         </div>
     </body>
 </html>

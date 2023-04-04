@@ -41,7 +41,7 @@ function checkScrollPosition() {
 
 async function loadNow() {
     globalThis.texts = await load("/assets/text/footer.txt", {list: true});
-    if(document.URL.split("#")[0].split("?")[0].endsWith("/")) {
+    if(document.URL.split("#")[0].split("?")[0].endsWith("voxelprismatic.github.io/")) {
         var d = new Date();
         var day = d.getDate();
         switch(d.getMonth()) {

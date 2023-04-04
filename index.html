@@ -1,17 +1,239 @@
 <!DOCTYPE html>
-<html>
-   <head></head>
-   <body style="background-color: #112222; color: #00ffff;">
-      <h1 style="text-shadow: 0px 0px 10px;">#] Hey there</h1>
-      You actually shouldn't be here. Instead, navigate to <a href="/prizm.dev/">/prizm.dev/</a>, thanks!<br>
-      <sub>
-          Why redirect? Simple: I don't want to sync/rename github repos. That breaks things.<br>
-          <sub>
-             Also use Firefox, that way you don't have to ever see this screen ;]
-           </sub>
-      </sub>
-      <script type="text/javascript">
-          window.location = "https://voxelprismatic.github.io/prizm.dev/";
-      </script>
-   </body>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- PRELOAD -->
+        <link rel="preload" src="/assets/script/min.js" type="text/javascript" as="script"/>
+        <link rel="preload" src="/assets/css/priz-cyan.css" type="text/css" as="stylesheet"/>
+        <link rel="preload" src="/assets/css/fonts.css" type="text/css" as="stylesheet"/>
+        <link rel="preload" src="/assets/css/ubuntu/Ubuntu-BI.ttf" type="font/sfnt" as="font"/>
+        <link rel="preload" src="/assets/css/ubuntu/Ubuntu-RI.ttf" type="font/sfnt" as="font"/>
+        <link rel="preload" src="/assets/css/ubuntu/Ubuntu-B.ttf" type="font/sfnt" as="font"/>
+        <link rel="preload" src="/assets/css/ubuntu/Ubuntu-R.ttf" type="font/sfnt" as="font"/>
+        <link rel="preload" src="/assets/image/webp/priz_cyan.webp" type="image/webp" as="image"/>
+
+        <!-- STATIC BETWEEN PAGES -->
+        <meta name="theme-color" content="#00FFFF">
+        <meta name="author" content="PRIZ ;]" />
+
+        <meta name="twitter:site" content="@VoxelPrismatic">
+        <meta name="twitter:creator" content="@VoxelPrismatic">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_cyan.webp" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://voxelprismatic.github.io/" />
+        <meta property="og:site_name" content="PRIZ ;]">
+
+        <meta property="og:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_cyan.webp" />
+        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:image:width" content="256" />
+        <meta property="og:image:height" content="256" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/png" href="/assets/image/favicon.png" />
+        <link rel="stylesheet" type="text/css" id="priz_neon_css" href="/assets/css/priz-cyan.css" />
+
+        <!-- DYNAMIC BETWEEN PAGES -->
+        <meta property="og:title" content="PRIZ ;]" id="title" />
+        <title>PRIZ ;]</title>
+        <meta property="og:description" content="Bot developer, artist, and [kinda] musician. Creator of PRIZM ;] bot. Creator of PRIZM ;] bot, PRIZ PLAYER ;] and PRIZcord." />
+        <meta name="description" content="Bot developer, artist, and [kinda] musician. Creator of PRIZM ;] bot, PRIZ PLAYER ;] and PRIZcord." />
+        <meta name="keywords" content="voxelprismatic, prizm, priz, prizmdev, prizm dev, voxelizedprismatic, prizmatic, voxel prismatic, prizcord, priz player, prizm bot, priz9244">
+
+        <style type="text/css">
+            #head {
+                top: -100px !important;
+            } #logo > img:hover {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class="bgcolor" style="background-color: rgb(17, 34, 34);">
+        <div id="logo">
+            <img src="/assets/image/webp/priz_cyan.webp" alt="[prizm logo]" id="truelogo" tabindex="-1" height="156px" onclick="location.reload()"/>
+        </div>
+        <h1 id="head" tabindex="-1">PRIZ ;]</h1>
+        <div id="content">
+            <div id="about" class="sect" style="transition: none 0s ease 0s;">
+                <h1 onclick="linkMe(this);" id="about-me" tabindex="0">About me</h1>
+                <br>
+                <div>
+                    <img src="https://pbs.twimg.com/profile_images/1630647861267316736/lvCL4xjI_400x400.jpg" style="border-radius: 8px"/>
+                    I am a very strong conservative, but not necessarily Christian. Although I have practiced Russian
+                    Orthodox when I was younger, but I never actually learned enough Russian to understand.<br>
+                    <i>Turns out that the Russian language used so old that my parents didn't understand either... lol</i>
+                </div>
+                <br>
+                <h2 onclick="linkMe(this);" id="The-basic-stuff" tabindex="0">The basic stuff</h2>
+
+                <h4 onclick="linkMe(this);" id="music-favorites" tabindex="0">Music favorites</h4>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Genre </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> 90's Rock</f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Track </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> <b>Genocide (Losing My Mind)</b> by Timcast</f-r>
+                </div>
+
+                <br>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Genre </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> Post/Cinematic Rock</f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Track </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> <b>From the Sky We Fell</b> by Montear</f-r>
+                </div>
+
+                <h4 onclick="linkMe(this);" id="other-favorites" tabindex="0">Other favorites</h4>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Language </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> English</f-r>
+                </div>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l><b>Programming</b> Language </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> Python</f-r>
+                </div>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Operating System </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> Linux</f-r>
+                </div>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Editor </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> GNU Nano and Kate</f-r>
+                </div>
+
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>PC </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> bruh im stuck in 2017</f-r>
+                </div>
+
+                <br><br>
+                <h2 onclick="linkMe(this);" id="politics" tabindex="0">Politics</h2>
+                As mentioned earlier, I am a very conservative man. But, I also have a sense of humor, so I gladly embrace
+                any and all labels that people call me, including:
+                <ul>
+                    <li>Transphobe</li>
+                    <li>Homophobe</li>
+                    <li>Bigot</li>
+                    <li>Alt-Right</li>
+                    <li>Fascist</li>
+                    <li><b>An inhuman monster</b></li>
+                </ul>
+                I also identify as <b>Soviet-American</b>, and my pronouns are stop/mangling/dictionaries.<br>
+                But, most importantly, <b>I identify as correct</b>, and you MUST respect that, you fascist bigot.
+            </div>
+            <div id="projects" class="sect" style="transition: none 0s ease 0s;">
+                <h1 onclick="linkMe(this);" id="Comptelec" tabindex="0">Comptelec</h1>
+                <br />
+                Old mechanical calculators are frankly just better than the basic '4 function'* calculators that exist today
+                <br />
+                <a-c>
+                    <a href="/re?p=github+/comptelec" target="_blank" tabindex="0"><span class="btn" tabindex="-1">Build it yourself!</span></a> <i>or just see my progress</i>
+                </a-c>
+                <br />
+                <sub>* Has it ever occurred to you that 4 function calculators <i>never</i> have 4 functions? They always have at least 6: + - / * % &#x221a;</sub><br>
+                <br />
+                <line></line><br />
+
+
+
+                <h1 onclick="linkMe(this);" id="7" tabindex="0"><span style='position:absolute;opacity:0.5;color:#ff0;'>~</span>7</h1>
+                <br />
+                An arcade game that's endlessly addicting<br><br>
+                <a-c>
+                    <a href="/games/7/" target="_blank" tabindex="0"><span class="btn" tabindex="-1">Play now</span></a>
+                </a-c>
+                <br />
+                <a-c>
+                    <a href="/games/arcade/pacman" target="_blank" tabindex="0">[Pac-Man]</a>
+                    <a href="/games/sudoku" target="_blank" tabindex="0">[Sudoku]</a>
+                    <a href="/games/tetris" target="_blank" tabindex="0">[Tetris]</a>
+                    <a href="/games/mines" target="_blank" tabindex="0">[Mines]</a>
+                </a-c>
+                <br />
+                <br />
+                <line></line><br />
+
+                <h1 onclick="linkMe(this);" id="photos" tabindex="0">Photography</h1>
+                <br />
+                I think I take some good photos, check them out yourself:<br>
+                <div style="display: grid; gap: 8px; grid-template-columns: auto auto;">
+                    <div style="display: inline-grid;">
+                        <a href="/photos/laguna" target="_blank">
+                            <img src="/photography/laguna/splashy_birb.webp-med.webp" style="border-radius: 8px"/>
+                        </a>
+                    </div>
+                    <div style="display: inline-grid;">
+                        <a href="/photos/antelope-canyon" target="_blank">
+                            <img src="/photography/antelope canyon/41.webp" style="border-radius: 8px"/>
+                        </a>
+                    </div>
+                    <div style="display: inline-grid;">
+                        <a href="/photos/leaves" target="_blank">
+                            <img src="/photography/leaves/pink-silhouette.webp-med.webp" style="border-radius: 8px"/>
+                        </a>
+                    </div>
+                    <div style="display: inline-grid;">
+                        <a href="/photos/antelope-canyon" target="_blank">
+                            <img src="https://voxelprismatic.github.io/photography/antelope canyon/41.webp" style="border-radius: 8px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="stalk" class="sect" style="transition: none 0s ease 0s;">
+                <h1 onclick="linkMe(this);" id="STALK-ME-" tabindex="0">Feel free to stalk me, I guess</h1>
+                <br />
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l><a href="/re?p=twitter" target="_blank" tabindex="0">Twitter</a> </f-l><dict style="transition: none; line-height: 27.5px;"></dict>
+                    <f-r> @<b>VoxelPrismatic</b></f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Discord </f-l><dict style="transition: none; line-height: 27.5px;"></dict>
+                    <f-r> <b>PRIZ ;]</b>#9244</f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l><a href="/re?p=github" target="_blank" tabindex="0">GitHub</a> </f-l><dict style="transition: none; line-height: 27.5px;"></dict>
+                    <f-r> github/<b>VoxelPrismatic</b></f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l><a href="/re?p=patreon" target="_blank" tabindex="0">Patreon</a> </f-l><dict style="transition: none; line-height: 27.5px;"></dict>
+                    <f-r> patreon/<b>VoxelPrismatic</b></f-r>
+                </div>
+                <div style="height: 27.5px; min-height: 27.5px;" class="dict-good">
+                    <f-l>Literally stalk me </f-l><dict style="transition: none; line-height: 27.5px;"></dict><f-r> Somewhere in the <b>Universe</b></f-r>
+                </div>
+                <br />
+                You can always find me under <codeline>@VoxelPrismatic</codeline> or with the username <codeline>PRIZ ;]</codeline>
+                <div style="text-align: center;">
+                    <div style="height: 0px; transition: none 0s ease 0s;" id="spacer"></div>
+                    <sub id="footer">
+                        <br />
+                        <br />
+                        <b style="font-size: larger;">BY PRIZ WITH WINKY BRACKET FACE ;]</b><br />
+                        <span id="links_and_sources" tabindex="-1">
+                            <a id="page_source_about" target="_blank" rel="noreferrer" href="https://github.com/VoxelPrismatic/voxelprismatic.github.io/blob/master/index.html" tabindex="0">View source</a>
+                        <br />
+                        <span id="copyright">© PRIZ ;], 2023</span>
+                        <br>
+                        <span id="funnytextthing" tabindex="-1">*loading funny text thing</span><br />
+                        <br />
+                    </sub>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;" id="scripts">
+            <script type="text/javascript">
+                var theme = "cyan";
+                var loader = "main";
+            </script>
+            <a id="hiddenlink" tabindex="0"></a>
+            <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>
+            <script type="text/javascript" defer>
+                loadNow();
+            </script>
+            <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">
+        </div>
+        <div id="jumper" onclick="jumpToEdge()">[V]</div>
+    </body>
 </html>
