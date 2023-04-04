@@ -1,13 +1,3 @@
-try {
-    window.parent.location.host;
-} catch(err) {
-    if(!document.referrer.includes("top.gg") && !document.referrer.includes("discordextremelist.xyz")) {
-        url = "https://voxelprismatic.github.io/" + document.referrer.split("/").slice(3).join("/");
-        window.parent.location = url;
-        window.location = url;
-    }
-}
-
 function $(q, e = document) { return e.querySelector(q); }
 function $$(q, e = document) { return e.querySelectorAll(q); }
 function loadPage() {}
@@ -25,7 +15,7 @@ function flickery_element(n){n==$("h1#head")&&n.clientHeight>54&&(console.log(n.
 var is_IE=/(MSIE|Trident|OS ?X|macOS|iOS|iPadOS|iPad|iPod|iPhone|Safari)/i.test(window.navigator.userAgent),is_Chrome=/Chrome\//.test(window.navigator.userAgent);function jumpToEdge(e=0){window.navigator.vibrate([5]),window.setTimeout(e=>{globalThis.lastPosition=e},2e3,window.scrollY),"[Λ]"==$("#jumper").innerHTML?(is_IE?window.scrollTo(0,0):window.scrollTo({top:0,behavior:"smooth"}),$("#jumper").innerHTML="[V]"):(is_IE?window.scrollTo(0,document.body.scrollHeight):is_Chrome?$("#footer").scrollIntoView({block:"start",inline:"end",behavior:"smooth"}):window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"}),$("#jumper").innerHTML="[Λ]")}function resetUpdate(){shouldUpdate=!0}function changeScrollingThingy(e=null){var o=$("#jumper");if(null==e||null==e.deltaY){if(window.scrollY%2)return;window.scrollY/document.body.scrollHeight>=.5?(o.innerHTML="[Λ]",$("#nav").style.bottom="-100px"):(o.innerHTML="[V]",$("nav").style.bottom="0px")}else{var t=window.scrollY;o=$("#jumper");t>=document.body.scrollHeight-95?(o.innerHTML="[Λ]",$("nav").style.bottom="0px"):e.deltaY>0||t<=32?(o.innerHTML="[V]",$("nav").style.bottom="0px"):(o.innerHTML="[Λ]",$("nav").style.bottom="-100px")}shouldUpdate&&(updateSpacer(),shouldUpdate=!1,window.setTimeout(resetUpdate,500))}function getHeight(e){let o=compSty(e);var t=Number(o.height.slice(0,-2));return t+=Number(o.marginTop.slice(0,-2)),t+=Number(o.marginBottom.slice(0,-2))}function updateSpacer(e=!1){e||loadFooter(),spacer=$("#spacer"),spacer.style.transition="none",spacer.style.height="0px";for(var o=window.innerHeight,t=0;Number(compSty("body").height.slice(0,-2))+7<o;)spacer.style.height=t+"px",t+=1}shouldUpdate=!0;var sub_styles_timeout=!1;function sub_styles(e=!0){globalThis.sub_styles_timeout||(globalThis.sub_styles_timeout=!0,console.groupCollapsed("Reformatting page"),e&&$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),e&&$("table")&&(console.log("Styling tables"),logFunc(styleTables)),e&&$(".accent")&&(console.log("Moving accents"),logFunc(style_accents)),$("dict")&&logFunc(resizeDicts),$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),console.groupEnd("Reformatting page"),window.setTimeout(()=>globalThis.sub_styles_timeout=!1,100))}
 
 // aesthetic/colors.js
-function swapColor(e,s=!0){var t=$$("link[rel='stylesheet']");t[t.length-1].href.endsWith("priz-"+e+".css")||document.head.insertAdjacentHTML("beforeend",`<link rel="stylesheet" type="text/css" href="/prizm.dev/assets/css/priz-${e}.css"/>`),$("#truelogo").src.endsWith("priz_"+e+".webp")||($("#truelogo").src=`/prizm.dev/assets/image/webp/priz_${e}.webp`);try{resizeDicts(!1)}catch(e){}try{setTransitions(!1)}catch(e){}}
+function swapColor(e,s=!0){var t=$$("link[rel='stylesheet']");t[t.length-1].href.endsWith("priz-"+e+".css")||document.head.insertAdjacentHTML("beforeend",`<link rel="stylesheet" type="text/css" href="/assets/css/priz-${e}.css"/>`),$("#truelogo").src.endsWith("priz_"+e+".webp")||($("#truelogo").src=`/assets/image/webp/priz_${e}.webp`);try{resizeDicts(!1)}catch(e){}try{setTransitions(!1)}catch(e){}}
 
 // load-min.js
 
@@ -50,8 +40,8 @@ function checkScrollPosition() {
 }
 
 async function loadNow() {
-    globalThis.texts = await load("/prizm.dev/assets/text/footer.txt", {list: true});
-    if(document.URL.split("#")[0].split("?")[0].endsWith("/prizm.dev/")) {
+    globalThis.texts = await load("/assets/text/footer.txt", {list: true});
+    if(document.URL.split("#")[0].split("?")[0].endsWith("/")) {
         var d = new Date();
         var day = d.getDate();
         switch(d.getMonth()) {
@@ -61,7 +51,7 @@ async function loadNow() {
             case 1: // February
                 if(day == 14) {
                     swapColor("pink");
-                    $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_heart.webp";
+                    $("#truelogo").src = "/assets/image/webp/holi/priz_heart.webp";
                     $("#head").innerHTML = "LOVE ;]";
                 } else {
                     swapColor("cyan");
@@ -78,14 +68,6 @@ async function loadNow() {
                 break;
             case 5: // June
                 swapColor("cyan");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_pride.webp";
-                $("#head").innerHTML = "<span style='color:#f00'>P</span>" +
-                                       "<span style='color:#f80'>R</span>" +
-                                       "<span style='color:#ff0'>I</span>" +
-                                       "<span style='color:#0f0'>D</span>" +
-                                       "<span style='color:#08f'>E</span>" +
-                                       "<span style='color:#80f'> ;]</span>";
-
                 break;
             case 6: // July
                 swapColor("cyan");
@@ -98,20 +80,20 @@ async function loadNow() {
                 break;
             case 9: // October
                 swapColor("orange");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_spook.webp";
+                $("#truelogo").src = "/assets/image/webp/holi/priz_spook.webp";
                 $("#head").innerHTML = "SPOOK ;]";
                 break;
             case 10: // November
                 swapColor("cyan");
                 if(day == 11) {
-                    $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_bday.webp";
+                    $("#truelogo").src = "/assets/image/webp/holi/priz_bday.webp";
                     $("#head").innerHTML = "BDAY ;]";
                 }
                 break;
             case 11:
                 // December -- Festive
                 swapColor("cyan");
-                $("#truelogo").src = "/prizm.dev/assets/image/webp/holi/priz_xmas.webp";
+                $("#truelogo").src = "/assets/image/webp/holi/priz_xmas.webp";
                 $("#head").innerHTML = "FESTIVE ;]";
                 break;
             default:
@@ -197,7 +179,7 @@ async function loadNow() {
 var patreon_nav = `
 <nav class="sect">
     <span onclick="the_sads()">X</span>
-    Consider supporting me on <a href="/prizm.dev/re/patreon" target="_blank">Patreon</a>!
+    Consider supporting me on <a href="/re/patreon" target="_blank">Patreon</a>!
 </nav>`
 
 async function load(e,n=!1,t=!1,a=!1){e.endsWith("error.html")?$("#head").innerHTML="ERROR ;[":$("#head").innerHTML=document.title,console.log("Reading "+e),n.list&&(a=!0),n.json&&(t=!0);var i=await fetch(e),r=await i.text();return(n||a||t)&&(r=r.trim()),t?JSON.parse(r.replace(/\\\n/gm,"\\n")):a?r.split("\n"):r}function loadFooter(){}function linkMe(t){t.scrollIntoView({behavior:"smooth"});var e=t.id;"#"!=e[0]&&(e="#"+e),window.history.replaceState(window.history.state,document.title,e),flickery_element(t)}function flickery_element(t){delayFunction(function(t){t.style.transition="none"},1e3,1001,1e3,t);var e=!0,n=compSty(t).color;n="rgba("+n.split("(")[1].slice(0,-1)+", 0.7)";for(var i=1500;i<=3e3;i+=Math.floor(200*Math.random())+25)(e=!e)?delayFunction(function(t){t.style.color=""},i,i+1,i,t):delayFunction(function(t){t.style.color=n},i,i+1,i,t);delayFunction(function(t){t.style.transition=""},i-25,i,5,t),delayFunction(function(t){t.style.color=n},i-50,i-49,i,t),delayFunction(function(t){t.style.color=""},i,i+1,i,t)}function resizeDicts(t=!0,e=document){if(!(window.innerHeight+""+window.innerWidth).includes(".")){var n=compSty("h1").height.slice(0,-2)/2;t&&(console.log("Window resized to "+window.innerWidth+"x"+window.innerHeight),console.log("Resizing elements"));var i=!1,o=2*n+20+"px",l=n+6+"px",r=n+"px";for(var s of $$("dict",e)){var c=s.parentElement;if(0!=c.clientWidth){var a=c.clientWidth-5,d=s.style;a-=s.nextElementSibling.clientWidth,a-=s.previousElementSibling.clientWidth,d.lineHeight=r,s.classList.remove("smol-dict"),a<100&&(i=!0),s.parentElement.style.minHeight=n+"px",s.parentElement.style.height=n+"px";var h=dictsPerfect}}if(i){for(var s of $$("dict"))s.classList.add("smol-dict"),s.style.top=l,s.parentElement.style.minHeight=o,s.parentElement.style.height=o;h=dictsTooSmol}delayFunction(h,0,1e3,500),updateSpacer()}}function dictsPerfect(){for(var t of $$("dict")){var e=t.parentElement;e.classList.add("dict-good"),e.classList.remove("dict-smol"),t.style.top=""}}function dictsTooSmol(){for(var t of $$("dict")){var e=t.parentElement;e.classList.add("dict-smol"),e.classList.remove("dict-good"),t.style.top=Number(t.style.lineHeight.slice(0,-2))+5+"px"}}function toggleDrop(t){t.classList.toggle("h-dropper-closed")?t.innerHTML="[V]":t.innerHTML="[Λ]",target=t.nextElementSibling,target||(target=t.parentElement.nextElementSibling),target.classList.toggle("invis"),resizeDicts(!1,target),t.scrollIntoView({behavior:"smooth"}),lastPosition=document.body.scrollHeight+10}var texts=[];function changeFunnyTextThing(){for(var t=texts[Math.floor(Math.random()*texts.length)];""==t||t==$("#funnytextthing").innerHTML;)t=texts[Math.floor(Math.random()*texts.length)];$("#funnytextthing").innerHTML=t,delayUpdateSpacer()}function compSty(t){try{return window.getComputedStyle(t)}catch(e){return window.getComputedStyle($$(t)[0])}}function the_sads(){var e=$("nav");var s=e.style;e.innerHTML="awww ;[";s.opacity="0";s.bottom="-16px"}

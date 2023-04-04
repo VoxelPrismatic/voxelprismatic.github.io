@@ -1,15 +1,5 @@
 /* This file is not meant to be minimized, just less resource intensive */
 
-try {
-    window.parent.location.host;
-} catch(err) {
-    if(!document.referrer.includes("top.gg")) {
-        url = "https://voxelprismatic.github.io/prizm.dev/" + document.referrer.split("/").slice(3).join("/");
-        window.parent.location = url;
-        window.location = url;
-    }
-}
-
 function tag(element) {
     if(element["tag"] == "!")
         return document.createComment(element["#"]);
