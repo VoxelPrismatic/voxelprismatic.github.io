@@ -1,6 +1,6 @@
 document.head.insertAdjacentHTML("beforeend", `<style type="text/css">
 img.blur {
-    animation: cubic-bezier(0.5,0,0.25,1) img-load 1s alternate infinite;
+    animation: cubic-bezier(0.5,0,0.25,1) img-load 0.75s alternate infinite;
 }
 img[src*="-smol.webp"] {
     filter: blur(0px) saturate(0);
