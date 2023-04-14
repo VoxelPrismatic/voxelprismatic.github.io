@@ -95,7 +95,7 @@
                         here to be more readable, with the <a data-cite="2" target="_blank">voting map</a> from 2020 according
                         to CNN.
                         <br><br>
-                        <input type="radio" name="tbl-ttl" id="tbl-sel-ttl"><label>Total homicides; in 2020</label></input>
+                        <input type="radio" name="tbl-ttl" id="tbl-sel-ttl"><label>Total homicides; in 2020</label></input><br>
                         <input type="radio" name="tbl-ttl" id="tbl-sel-100k"><label>Homicides per 100k citizens; in 2020</label></input>
                         <table id="tbl-ttl-homicide">
                             <tr>
@@ -166,7 +166,6 @@
                             </tr>
                         </table>
                         <br>
-                        <h3>Homicides per 100K citizens</h3>
                         <table id="tbl-100k-homicide" style="display: none">
                             <tr>
                                 <th>City</th>
@@ -289,7 +288,15 @@
                         elem.href = cited_sources[cite_number];
                 }
 
-                document.querySelector("#tbl-sel-ttl").onchange = (evt) => { $("#tbl-ttl-homicide").style.}
+                document.querySelector("#tbl-sel-ttl").onchange = (evt) => {
+                    $("#tbl-ttl-homicide").style.display = "";
+                    $("#tbl-100k-homicide").style.display = "none";
+                }
+                document.querySelector("#tbl-sel-100k").onchange = (evt) => {
+                    $("#tbl-ttl-homicide").style.display = "none";
+                    $("#tbl-100k-homicide").style.display = "";
+                }
+                document.querySelector("#tbl-sel-ttl").checked = true;
             </script>
             <a id="hiddenlink" tabindex="0"></a>
             <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>

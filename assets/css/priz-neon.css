@@ -431,22 +431,22 @@ body {
 }
 
 :not(#links_and_sources) > a[target="_blank"]::after {
-    opacity: 0;
-    content: "[opens in a new tab]";
+    display: none;
+    color: #ccc;
+    transition: opacity 0.5s ease 0s;
+    content: "opens in a new tab";
     text-decoration: none;
     text-shadow: none;
     position: absolute;
-    display: inline-block;
     font-size: 75%;
     text-shadow: none;
     background-color: var(--spoil-bg);
-    padding: 4px 8px;
-    margin-left: -32px;
-    margin-top: -28px;
+    padding: 2px 4px;
+    margin-left: 4px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     border: 2px solid;
     border-color: var(--spoil-border) var(--spoil-border) #0000;
 } a[target="_blank"]:hover::after {
-    opacity: 1;
+    display: inline-block !important;
 }
