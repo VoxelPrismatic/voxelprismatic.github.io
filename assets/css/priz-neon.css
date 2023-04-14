@@ -1,0 +1,427 @@
+/* ---- Base style -------------------------------------------------------------------------------------------------- */
+.mono-font {
+    font-family: "Ubuntu Mono", monospace;
+} * {
+    font-family: "Ubuntu", sans-serif;
+    transition: all 1s ease 0s;
+} div {
+    line-height: 1.5;
+}
+
+
+/* ---- Links ------------------------------------------------------------------------------------------------------- */
+a {
+    color: var(--link-color);
+    white-space: nowrap;
+} a:hover, a:focus {
+    color: var(--link-focus);
+}
+
+
+/* ---- Textarea ---------------------------------------------------------------------------------------------------- */
+textarea {
+    background-color: var(--textarea-bg);
+    caret-color: var(--textarea-caret);
+    border-style: solid;
+    border-width: 2px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: var(--textarea-border) var(--textarea-border) #0000;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+    color: #fff;
+    margin: 5px 0px;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/* ---- Neon -------------------------------------------------------------------------------------------------------- */
+body {
+    text-align: center;
+    margin: auto;
+    color: #aaa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--theme);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+/* ---- Tables ------------------------------------------------------------------------------------------------------ */
+th {
+    color: var(--theme);
+    background-color: var(--table-head-bg);
+    caret-color: var(--table-caret);
+    border-style: solid;
+    border-width: 2px 2px 0px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: var(--theme) var(--theme) #0000;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 0px;
+    text-shadow: 0px 0px 5px;
+} th:hover, th:focus {
+    text-shadow: 0px 0px 10px;
+} th:nth-child(1) {
+    border-top-left-radius: 5px;
+} th:nth-last-child(1) {
+    border-top-right-radius: 5px;
+} tr:nth-child(2n) {
+    background-color: var(--table-row-shade);
+} td, tr {
+    margin: 5px;
+    padding: 5px;
+    border-width: 0px 2px;
+    border-color: #0000 var(--theme);
+    border-style: solid;
+} table {
+    width: 100%;
+    border-spacing: 0px;
+} blockquote {
+    margin: 0px 5px -5px;
+    padding: 5px;
+    border-left: 2px solid var(--theme);
+}
+
+.tr-l {
+    border-right-color: #0000;
+    border-right-width: 0px;
+} .tr-r {
+    border-left-color: #0000;
+    border-left-width: 0px;
+}
+
+/* ---- List elements ----------------------------------------------------------------------------------------------- */
+al {
+    display: block;
+    list-style-type: lower-alpha;
+    margin: 1em 0px;
+    padding-left: 40px;
+} ol, ul, al {
+    margin: 0px;
+    padding-top: 0px;
+    padding-left: 32px;
+} ul {
+    list-style-type: "> ";
+}
+ul > li::marker,
+ol > li::marker,
+al > li::marker {
+    font-family: "Ubuntu Mono", mono;
+    color: #888;
+}
+
+
+/* ---- Spoil block ------------------------------------------------------------------------------------------------- */
+spoil {
+    border-style: solid;
+    border-width: 2px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: var(--spoil-border) var(--spoil-border) #0000;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--spoil-bg);
+    font-size: smaller;
+    margin: 2px;
+    padding: 2px;
+    color: var(--spoil-bg);
+}
+spoil:hover, spoil:focus {
+    color: #fff;
+} .unhide {
+    color: #fff !important;
+}
+
+
+/* ---- Code block -------------------------------------------------------------------------------------------------- */
+codeblock,
+codeline {
+    border-style: solid;
+    border-width: 2px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: var(--code-border) var(--code-border) #0000;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--code-bg);
+    margin: 5px;
+    padding: 5px;
+    color: #aaa;
+    font-family: "Ubuntu Mono", mono;
+    cursor: auto;
+    white-space: pre-wrap;
+    display: block;
+}
+codeblock *,
+codeline * {
+    font-family: "Ubuntu Mono", mono;
+}
+codeline {
+    margin: 2px;
+    padding: 2px;
+    font-size: smaller;
+    display: inline-block;
+}
+
+
+/* ---- Dict block -------------------------------------------------------------------------------------------------- */
+a-l {
+    text-align: left;
+} a-r {
+    text-align: right;
+} a-c {
+    text-align: center;
+} a-j, a-l, a-r, a-c {
+    display: block;
+} f-l {
+    float: left;
+} f-r {
+    float: right;
+}
+
+line {
+    height: 5px;
+    border: 2px solid var(--theme);
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+    display: block;
+    box-shadow: var(--theme) 0px 0px 5px,
+                var(--theme) 0px 0px 5px inset;
+}
+line:hover, line:focus {
+    border-color: var(--theme);
+    box-shadow: var(--theme) 0px 0px 10px,
+                var(--theme) 0px 0px 10px inset;
+}
+accent {
+    position: relative;
+}
+
+div.dict-good {
+    display: flex;
+} div.dict-good dict {
+    flex-grow: 1;
+    width: unset !important;
+} div.dict-smol {
+    display: block;
+} div.dict-smol dict {
+    width: 100% !important;
+}
+
+dict {
+    display: inline-block;
+    width: 0px;
+    border: 2px solid #444;
+    border-radius: 2px;
+    height: 0px !important;
+    position: relative;
+    top: 10px;
+    margin: 0px 5px;
+} .smol-dict {
+    margin: auto;
+}
+
+
+/* ---- Static elements --------------------------------------------------------------------------------------------- */
+#footer {
+    font-size: x-small;
+} #logo, #head {
+    width: 100%;
+    text-align: center;
+    font-size: xxx-large;
+} #jumper {
+    color: var(--theme);
+    caret-color: var(--jumper-caret);
+    border-style: solid;
+    border-width: 2px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: var(--theme) #0000 #0000 var(--theme);
+    border-radius: 5px 0px 0px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-family: "Ubuntu Mono", mono;
+    background-color: inherit;
+    box-shadow: var(--theme) 0px 0px 4px;
+    margin: 0px;
+    z-index: 100;
+} #jumper:hover, #jumper:focus {
+    text-shadow: 0px 0px 5px;
+}
+
+.emoji {
+    height: 18.75px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+#logo {
+    position: relative;
+    top: 20px;
+} #logo:hover, #logo:focus {
+    filter: drop-shadow(var(--theme) 0px 0px 5px);
+} #head {
+    position: relative;
+    top: -80px;
+    transform: rotate(-14deg);
+    text-shadow: 0px 0px 5px, black 0px 0px 20px;
+    font-style: italic;
+} #head:hover, #head:focus {
+    text-shadow: 0px 0px 10px, black 0px 0px 40px;
+}
+
+
+/* ---- Design ------------------------------------------------------------------------------------------------------ */
+.list {
+    max-height: 30vh;
+    overflow-y: auto;
+    text-align: center !important;
+} .margin {
+    margin: 5px auto;
+} .sect, .tab {
+    width: 90vw;
+} .loading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+} .invis {
+    display: none;
+} .bgcolor {
+    background-color: var(--bg);
+} .mono {
+    font-family: "Ubuntu Mono", mono;
+} .hidden-marker::marker {
+    color: #0000;
+} .flip-h {
+    transform: scaleX(-1);
+    display: inline-block;
+} .flip-v {
+    transform: scaleY(-1);
+    display: inline-block;
+} .flip-h.flip-v {
+    transform: scale(-1);
+}
+
+.sect {
+    border-style: solid;
+    border-width: 2px;
+    border-image: none 100% / 1 / 0 stretch;
+    border-color: rgb(255, 255, 0) rgb(255, 255, 0) rgba(0, 0, 0, 0);
+    border-radius: 5px 5px 0px 0px;
+    margin: 5px auto;
+    text-align: justify;
+    padding: 10px;
+}
+
+
+/* ---- More neon --------------------------------------------------------------------------------------------------- */
+.neon {
+    border-radius: 5px;
+    border: 2px solid var(--theme);
+    box-shadow: var(--theme) 0px 0px 5px 1px;
+} .neon:hover, .neon:focus {
+    box-shadow: var(--theme) 0px 0px 10px 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0px 0px 5px;
+    color: var(--theme);
+}
+a:hover, a:focus {
+    text-shadow: 0px 0px 10px;
+    color: var(--link-hover);
+}
+
+h1:hover, h1:focus, h2:hover, h2:focus,
+h3:hover, h3:focus, h4:hover, h4:focus,
+h5:hover, h5:focus, h6:hover, h6:focus {
+    text-shadow: 0px 0px 10px;
+}
+
+
+
+/* ---- Page width -------------------------------------------------------------------------------------------------- */
+:root {
+    --max-width: 432px;
+} @media only screen and (min-width: 480px) {
+    :root { --max-width: 432px; }
+} @media only screen and (min-width: 640px) {
+    :root { --max-width: 576px; }
+} @media only screen and (min-width: 720px) {
+    :root { --max-width: 680px; }
+} @media only screen and (min-width: 1280px) {
+    :root { --max-width: 720px; }
+}
+
+.sect, .tab {
+    width: var(--max-width);
+} img {
+    max-width: var(--max-width);
+}
+
+
+/* ---- Verbosity --------------------------------------------------------------------------------------------------- */
+:focus, :hover {
+    outline: currentcolor none medium;
+} .focusing {
+    outline: currentcolor dotted medium;
+}
+
+nah {
+    cursor: default;
+} #head {
+    cursor: default;
+} div {
+    cursor: default;
+} span {
+    cursor: default;
+} img {
+    cursor: default;
+} def {
+    cursor: help;
+} a {
+    cursor: pointer;
+} h1, h2, h3, h4, h5, h6 {
+    cursor: pointer;
+} spoil {
+    cursor: pointer;
+} button {
+    cursor: pointer;
+} #jumper {
+    cursor: pointer;
+}
+
+
+/* ---- Miscellaneous ----------------------------------------------------------------------------------------------- */
+body {
+    background-color: var(--bg) !important;
+} a {
+    text-decoration: underline;
+} nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center !important;
+    background: inherit;
+    box-shadow: 0px 0px 1vw 1vw var(--bg);
+    bottom: -100px;
+    z-index: 50;
+    margin-bottom: 0px !important;
+} div.sect:last-child > div:last-child {
+    margin-bottom: 30px !important;
+} nav > span {
+    float: right;
+    height: 0px;
+    display: block;
+    opacity: 50%;
+    top: 2px;
+    position: relative;
+    cursor: pointer;
+} nav > span:hover {
+    opacity: 60%;
+}
