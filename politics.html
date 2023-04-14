@@ -57,7 +57,7 @@
     </head>
     <body class="bgcolor" style="background-color: rgb(17, 34, 34);">
         <div id="logo">
-            <img src="/assets/image/webp/priz_white.webp" alt="[prizm logo]" id="truelogo" tabindex="-1" height="156px" onclick="location.reload()"/>
+            <img src="/assets/image/webp/priz_white.webp" alt="[prizm logo]" id="truelogo" tabindex="-1" height="156px" onclick="location='/'"/>
         </div>
         <h1 id="head" tabindex="-1">POLITICS ;]</h1>
         <div id="content">
@@ -76,11 +76,11 @@
                 It is clear that there are only two viable options: nobody gets guns, or everyone gets guns. Let's
                 analyse the first option. America is the #1 manufacturer of guns, and arms the rest of the world.
                 Therefore, guns will always be available on the black market, and "nobody gets guns" is no longer viable.
-                So, we must arm everyone.<br>
+                So, we must arm everyone.<br><br>
                 Now, there are claims that strict gun laws reduce gun deaths. This statement, while true, is confounded
                 by the lack of guns on the streets. Of course, if there are no guns, there won't be gun deaths. Only
                 an idiot would try to disprove that statement. However, we must look at other rates of homicide to conclude
-                if guns are the issue.<br>
+                if guns are the issue.<br><br>
                 It is a well-known fact that most gun-related homicides occur in areas that have strict gun laws.
                 According to <a data-cite="1" target="_blank">this study</a> by WirePoints.org, the top 10 most violent
                 cities are very liberal.
@@ -102,7 +102,7 @@
                             <td>697</td>
                             <td>1</td>
                             <td><img src="/assets/image/stats/politics/gun/illinois.webp"/></td>
-                        <tr>
+                        </tr>
                         <tr>
                             <td>Philadelphia, PA</td>
                             <td>516</td>
@@ -172,7 +172,7 @@
                             <td>74.3</td>
                             <td>1</td>
                             <td><img src="/assets/image/stats/politics/gun/louisiana.webp"/></td>
-                        <tr>
+                        </tr>
                         <tr>
                             <td>St. Louis, MO</td>
                             <td>68.2</td>
@@ -274,7 +274,7 @@
                     "2": "https://www.cnn.com/election/2020/results/state/new-york",
                     "3": "https://www.aic.gov.au/statistics/homicide"
                 }
-                for(var cite_number of cited_sources) {
+                for(var cite_number in cited_sources) {
                     for(var elem of document.querySelectorAll(`[data-cite="${cite_number}"]`))
                         elem.href = cited_sources[cite_number];
                 }

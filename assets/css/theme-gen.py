@@ -1,29 +1,31 @@
-themes = [
-    "f00",
-    "f80",
-    "ff0",
-    "8f0",
-    "0f0",
-    "0f8",
-    "0ff",
-    "08f",
-    "00f",
-    "80f",
-    "f0f",
-    "f08",
-    "888",
-    "fff"
-]
+themes = {
+    "red": "f00",
+    "orange": "f80",
+    "yellow": "ff0",
+    "nuclear": "8f0",
+    "green": "0f0",
+    "sea": "0f8",
+    "cyan": "0ff",
+    "blurple": "08f",
+    "blue": "44f",
+    "purple": "80f",
+    "magenta": "f0f",
+    "pink": "f08",
+    "grey": "888",
+    "white": "fff"
+}
 
 link_static = {
     "f": "ff",
     "8": "aa",
+    "4": "99",
     "0": "88"
 }
 
 link_hover = {
     "f": "ff",
     "8": "cc",
+    "4": "bb",
     "0": "aa"
 }
 
@@ -32,12 +34,14 @@ link_hover = {
 text_caret = {
     "f": "99",
     "8": "95",
+    "4": "93",
     "0": "91"
 }
 
 text_bg = {
     "f": "11",
     "8": "08",
+    "4": "04",
     "0": "00"
 }
 
@@ -45,12 +49,14 @@ text_bg = {
 spoil_border = {
     "f": "44",
     "8": "38",
+    "4": "35",
     "0": "33"
 }
 
 spoil_bg = {
     "f": "33",
     "8": "28",
+    "4": "25",
     "0": "22"
 }
 
@@ -58,6 +64,7 @@ spoil_bg = {
 code_bg = {
     "f": "11",
     "8": "08",
+    "4": "04",
     "0": "00"
 }
 
@@ -65,15 +72,15 @@ code_bg = {
 bg = {
     "f": "22",
     "8": "18",
+    "4": "15",
     "0": "11"
 }
 
 def sel(theme, block):
     return "#" + block[theme[0]] + block[theme[1]] + block[theme[2]]
 
-for theme in themes:
-    print(theme)
-    name = input("theme name: ")
+for name in list(themes):
+    theme = themes[name]
     open("priz-" + name + ".css", "w+").write(f"""\
 @import url("/assets/css/priz-neon.css");
 
@@ -89,7 +96,7 @@ for theme in themes:
 
     --table-head-bg: #{theme}4;
     --table-caret: #{theme};
-    --table-row-shade: #{theme};
+    --table-row-shade: #{theme}1;
 
     --spoil-border: {sel(theme, spoil_border)};
     --spoil-bg: {sel(theme, spoil_bg)};

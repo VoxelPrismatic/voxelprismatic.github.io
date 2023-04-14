@@ -1,26 +1,26 @@
 @import url("/assets/css/priz-neon.css");
 
 :root {
-    --link-color: #8888ff;
-    --link-hover: #aaaaff;
+    --link-color: #9999ff;
+    --link-hover: #bbbbff;
 
-    --textarea-bg: #00001122;
-    --textarea-caret: #919199;
-    --textarea-border: #04f2;
+    --textarea-bg: #04041122;
+    --textarea-caret: #939399;
+    --textarea-border: #44f2;
 
-    --theme: #04f;
+    --theme: #44f;
 
-    --table-head-bg: #04f4;
-    --table-caret: #04f;
-    --table-row-shade: #04f;
+    --table-head-bg: #44f4;
+    --table-caret: #44f;
+    --table-row-shade: #44f1;
 
-    --spoil-border: #333344;
-    --spoil-bg: #222233;
+    --spoil-border: #353544;
+    --spoil-bg: #252533;
 
-    --code-border: #04f2;
-    --code-bg: #00001166;
+    --code-border: #44f2;
+    --code-bg: #04041166;
 
-    --jumper-caret: #04f;
+    --jumper-caret: #44f;
 
-    --bg: #111122;
+    --bg: #151522;
 }

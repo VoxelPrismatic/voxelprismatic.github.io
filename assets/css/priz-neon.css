@@ -3,7 +3,10 @@
     font-family: "Ubuntu Mono", monospace;
 } * {
     font-family: "Ubuntu", sans-serif;
-    transition: all 1s ease 0s;
+    transition: color 1s ease 0s,
+                opacity 1s ease 0s,
+                box-shadow 1s ease 0s,
+                text-shadow 1s ease 0s;
 } div {
     line-height: 1.5;
 }
@@ -282,8 +285,6 @@ dict {
     text-align: center !important;
 } .margin {
     margin: 5px auto;
-} .sect, .tab {
-    width: 90vw;
 } .loading {
     text-align: center;
     margin-top: 10px;
@@ -311,7 +312,7 @@ dict {
     border-style: solid;
     border-width: 2px;
     border-image: none 100% / 1 / 0 stretch;
-    border-color: rgb(255, 255, 0) rgb(255, 255, 0) rgba(0, 0, 0, 0);
+    border-color: var(--theme) var(--theme) #0000;
     border-radius: 5px 5px 0px 0px;
     margin: 5px auto;
     text-align: justify;
@@ -347,7 +348,7 @@ h5:hover, h5:focus, h6:hover, h6:focus {
 
 /* ---- Page width -------------------------------------------------------------------------------------------------- */
 :root {
-    --max-width: 432px;
+    --max-width: 90vw;
 } @media only screen and (min-width: 480px) {
     :root { --max-width: 432px; }
 } @media only screen and (min-width: 640px) {
@@ -415,7 +416,7 @@ body {
 } div.sect:last-child > div:last-child {
     margin-bottom: 30px !important;
 } nav > span {
-    float: right;
+    float: left;
     height: 0px;
     display: block;
     opacity: 50%;
