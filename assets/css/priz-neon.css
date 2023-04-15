@@ -93,7 +93,7 @@ th {
     border-left: 2px solid var(--theme);
 }
 
-td:first-child, td:first-child {
+th:first-child, td:first-child {
     border-left-width: 2px;
 }
 
@@ -431,11 +431,10 @@ body {
     transition: opacity 0.5s ease 0s, z-index 0.5s ease 0s;
     font-size: 0;
     color: #ccc;
-    content: url("data:image/webp;base64,UklGRkQAAABXRUJQVlA4TDgAAAAvD8ADEA8w//M///Mf8GATAECaAwtKEP3JZDUcCnD6ViOi//FdNskAEwSgAVHAi26oAQYYUv7/Yw==") !important;
+    content: url("data:image/webp;base64,UklGRlgAAABXRUJQVlA4TEsAAAAvD8ADEB8w//M//wKCguVdD3QYwCq2bSUb+z5RXgKkGTTjRSGCu5waEf2Pr1/tEB3AIlqMi3ijqBtFoTHr9DKoZFTBKBgDnLb92S0A");
     text-decoration: none;
     text-shadow: none;
     position: absolute;
-    font-size: 75% !important;
     text-shadow: none;
     background-color: var(--spoil-bg);
     padding: 2px 4px;
