@@ -1,69 +1,72 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
     <head>
-         <meta charset="utf-8" />
+        <meta charset="utf-8" />
 
         <!-- PRELOAD -->
         <link rel="preload" src="/assets/script/min.js" type="text/javascript" as="script"/>
-        <link rel="preload" src="/assets/css/priz-pink.css" type="text/css" as="stylesheet"/>
+        <link rel="preload" src="/assets/css/priz-white.css" type="text/css" as="stylesheet"/>
         <link rel="preload" src="/assets/css/fonts.css" type="text/css" as="stylesheet"/>
         <link rel="preload" src="/assets/css/ubuntu/Ubuntu-BI.ttf" type="font/sfnt" as="font"/>
         <link rel="preload" src="/assets/css/ubuntu/Ubuntu-RI.ttf" type="font/sfnt" as="font"/>
         <link rel="preload" src="/assets/css/ubuntu/Ubuntu-B.ttf" type="font/sfnt" as="font"/>
         <link rel="preload" src="/assets/css/ubuntu/Ubuntu-R.ttf" type="font/sfnt" as="font"/>
-        <link rel="preload" src="/assets/image/webp/priz_pink.webp" type="image/webp" as="image"/>
+        <link rel="preload" src="/assets/image/webp/priz_white.webp" type="image/webp" as="image"/>
 
         <!-- STATIC BETWEEN PAGES -->
-        <meta name="theme-color" content="#FF0088">
+        <meta name="theme-color" content="#00FFFF">
         <meta name="author" content="PRIZ ;]" />
 
         <meta name="twitter:site" content="@VoxelPrismatic">
         <meta name="twitter:creator" content="@VoxelPrismatic">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="https://voxelprismatic.github.io/assets/image/webp/priz_pink.webp" />
+        <meta name="twitter:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_white.webp" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://voxelprismatic.github.io/photos/" />
-        <meta property="og:site_name" content="PRIZ ;]">
+        <meta property="og:url" content="https://voxelprismatic.github.io/" />
+        <meta property="og:site_name" content="POLITICS ;]">
 
-        <meta property="og:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_pink.webp" />
+        <meta property="og:image" content="https://voxelprismatic.github.io/assets/image/webp/favi/priz_white.webp" />
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="256" />
         <meta property="og:image:height" content="256" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="icon" type="image/png" href="/assets/image/favicon.png" />
-        <link rel="stylesheet" type="text/css" id="priz_neon_css" href="/assets/css/priz-pink.css" />
+        <link rel="stylesheet" type="text/css" id="priz_neon_css" href="/assets/css/priz-white.css" />
 
         <!-- DYNAMIC BETWEEN PAGES -->
-        <meta property="og:title" content="PHOTOS ;]" id="title" />
-        <title>PHOTOS ;]</title>
-        <meta property="og:description" content="PHOTOS ;] - Index page" />
-        <meta name="description" content="PHOTOS ;] - Index page" />
+        <meta property="og:title" content="POLITICS ;]" id="title" />
+        <title>POLITICS ;]</title>
+        <meta property="og:description" content="Some political issues have a simple conclusion, you just have to think about it" />
+        <meta name="description" content="Some political issues have a simple conclusion, you just have to think about it" />
+
     </head>
-    <body class="bgcolor" style="background-color: #221115;">
+    <body class="bgcolor" style="background-color: rgb(17, 34, 34);">
         <div id="logo">
-            <img src="/assets/image/webp/priz_pink.webp" alt="[prizm logo]" id="truelogo" tabindex="-1" width="128em" onclick="location='/'"/>
+            <img src="/assets/image/webp/priz_white.webp" alt="[prizm logo]" id="truelogo" tabindex="-1" height="156px" onclick="location='/'"/>
         </div>
-        <h1 id="head" tabindex="-1" style="">PHOTOS ;]</h1>
+        <h1 id="head" tabindex="-1">POLITICS ;]</h1>
         <div id="content">
             <div class="sect" style="transition: none 0s ease 0s;">
-                    <h1 tabindex="0" id="photos">/photos/</h1>
-                    <blockquote>
-                        <a href="/photos/leaves" tabindex="0">leaves</a> - Backdrops of leaves<br />
-                        <a href="/photos/rainy-day" tabindex="0">rainy day</a> - Taken on a rainy day<br />
-                        <a href="/photos/my-window" tabindex="0">my window</a> - Sweet stuff outside my window<br />
-                        <a href="/photos/cat" tabindex="0">cat</a> - My silly cat<br />
-                        <a href="/photos/antelope-canyon" tabindex="0">antelope canyon</a> - in Arizona<br />
-                        <a href="/photos/laguna" tabindex="0">laguna</a> - in California<br />
-                    </blockquote>
+                <h1 onclick="linkMe(this);" id="political-topics" tabindex="0">Hot-button Political Topics</h1>
+                Many, many issues are very simple to understand. You just have to think about them logically to come
+                to a simple solution.<br>
+                Quickly jump to a topic:
+                <br>
+                <h1 tabindex="0" id="/politics">/politics/</h1>
+                <blockquote>
+                    <a href="/politics/guns" tabindex="0">guns</a> - 'Gun reform' is counter productive<br />
+                </blockquote>
+                <i>More topics will be coming soon</i>
+                <br><br>
                 <div style="text-align: center;">
                     <div style="height: 0px; transition: none 0s ease 0s;" id="spacer"></div>
                     <sub id="footer">
                         <br><br><b style="font-size: larger;">BY PRIZ WITH WINKY BRACKET FACE ;]</b><br>
                         <span id="links_and_sources" tabindex="-1">
                             <a href="/" target="" tabindex="0">Home page</a> //
-                            <a id="page_source_map" target="_blank" rel="noreferrer" href="https://github.com/VoxelPrismatic/voxelprismatic.github.io/blob/master/photos/index.html" tabindex="0">View source</a>
+                            <a id="page_source_map" target="_blank" rel="noreferrer" href="https://github.com/VoxelPrismatic/voxelprismatic.github.io/blob/master/politics/index.html" tabindex="0">View source</a>
                         </span>
                         <br>
                         <span id="copyright">© PRIZ ;], 2023</span>
@@ -75,8 +78,8 @@
 
         <div style="display: none;" id="scripts">
             <script type="text/javascript">
-                var theme = "pink";
-                var loader = "map_main";
+                var theme = "white";
+                var loader = "politics_main";
             </script>
             <a id="hiddenlink" tabindex="0"></a>
             <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>

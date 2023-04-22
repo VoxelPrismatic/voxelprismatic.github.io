@@ -450,3 +450,28 @@ body {
     opacity: 1 !important;
     z-index: 1000 !important;
 }
+
+#head {
+    top: -100px !important;
+} #logo > img:hover {
+    cursor: pointer;
+}
+
+details table img {
+    height: 128px;
+    width: 128px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: all 0.5s ease 0s;
+} details table img:hover {
+    transform: scale(3);
+}
+
+img[controls] {
+    width: 100%;
+}
+
+div.album img {
+    max-width: 100%;
+}
