@@ -232,7 +232,7 @@ dict {
 } #logo, #head {
     width: 100%;
     text-align: center;
-    font-size: xxx-large;
+    font-size: 48px;
 } #jumper {
     color: var(--theme);
     caret-color: var(--jumper-caret);
