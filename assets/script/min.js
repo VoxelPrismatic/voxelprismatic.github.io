@@ -41,6 +41,7 @@ function checkScrollPosition() {
 
 async function loadNow() {
     globalThis.texts = await load("/assets/text/footer.txt", {list: true});
+    document.body.insertAdjacentHTML("beforeend", patreon_nav);
     if(document.URL.split("#")[0].split("?")[0].endsWith("voxelprismatic.github.io/")) {
         var d = new Date();
         var day = d.getDate();
@@ -173,7 +174,6 @@ async function loadNow() {
     }
     h1.style.transition = ""
     //window.setInterval(flickery_element, 15000, $("h1#head"));
-    document.body.insertAdjacentHTML("beforeend", patreon_nav)
     a11y();
 }
 

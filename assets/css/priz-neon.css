@@ -472,6 +472,20 @@ img[controls] {
     width: 100%;
 }
 
+/* ---- Photos ------------------------------------------------------------------------------------------------------ */
 div.album img {
     max-width: 100%;
+}
+
+div.photogrid {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 4px;
+    grid-template-columns: auto auto;
+} div.photogrid > div {
+    display: inline-grid;
+} div.photogrid img {
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
 }

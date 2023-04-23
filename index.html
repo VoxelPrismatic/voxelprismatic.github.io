@@ -52,7 +52,7 @@
                 <h1 onclick="linkMe(this);" id="about-me" tabindex="0">About me</h1>
                 <div style="display: flex; align-items: center;">
                     <div style="padding-right: 8px">
-                        <img src="/assets/image/webp/pfp.webp" style="border-radius: 8px; width: 128px; display: block"/>
+                        <img src="/assets/image/webp/pfp.webp" alt="my face" style="border-radius: 8px; width: 128px; display: block"/>
                     </div>
                     <div>
                         I am a very strong conservative, but not necessarily Christian. Although I have practiced Russian
@@ -144,7 +144,7 @@
                 <i>I don't know if Shapiro or Klavan have official crew names</i>
                 <br><br>
                 You can find a growing list of my stances and explanations for certain political topics
-                <a href="politics">here</a>.
+                <a href="/politics">here</a>.
             </div>
             <div id="projects" class="sect" style="transition: none 0s ease 0s;">
                 <h1 onclick="linkMe(this);" id="Comptelec" tabindex="0">Comptelec</h1>
@@ -176,18 +176,26 @@
 
                 <h1 onclick="linkMe(this);" id="photos" tabindex="0">Photography</h1>
                 I think I take some <a href="/photos">good photos</a>, check them out yourself:<br><br>
-                <div style="display: grid; column-gap: 8px; row-gap: 4px; grid-template-columns: auto auto;">
-                    <div style="display: inline-grid;">
-                        <a href="/photos/laguna"><img src="/photography/laguna/splashy_birb.webp-med.webp" style="border-radius: 8px; width: 100%; cursor: pointer"/></a>
+                <div class="photogrid" style="">
+                    <div>
+                        <a href="/photos/laguna" title="Photo Album: Laguna">
+                            <img src="/photography/laguna/splashy_birb.webp-med.webp" alt="Album Preview: Laguna"/>
+                        </a>
                     </div>
-                    <div style="display: inline-grid;">
-                        <a href="/photos/antelope-canyon"><img src="/photography/antelope canyon/41.webp" style="border-radius: 8px; width: 100%; cursor: pointer"/></a>
+                    <div>
+                        <a href="/photos/antelope-canyon" title="Photo Album: Antelope Canyon">
+                            <img src="/photography/antelope canyon/41.webp-med.webp" alt="Album Preview: Antelope Canyon"/>
+                        </a>
                     </div>
-                    <div style="display: inline-grid;">
-                        <a href="/photos/leaves"><img src="/photography/leaves/pink-silhouette.webp-med.webp" style="border-radius: 8px; width: 100%; cursor: pointer"/></a>
+                    <div>
+                        <a href="/photos/leaves" title="Photo Album: Leaves">
+                            <img src="/photography/leaves/pink-silhouette.webp-med.webp" alt="Album Preview: Leaves"/>
+                        </a>
                     </div>
-                    <div style="display: inline-grid;">
-                        <a href="/photos/my-window"><img src="/photography/my window/blurry-night.webp-med.webp" style="border-radius: 8px; width: 100%; cursor: pointer"></a>
+                    <div>
+                        <a href="/photos/my-window" title="Photo Album: My Window">
+                            <img src="/photography/my window/blurry-night.webp-med.webp" alt="Album Preview: My Window"/>
+                        </a>
                     </div>
                 </div>
 
@@ -288,7 +296,7 @@
                 var theme = "cyan";
                 var loader = "main";
             </script>
-            <a id="hiddenlink" tabindex="0"></a>
+            <a id="hiddenlink" tabindex="0" href="/"></a>
             <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>
             <script type="text/javascript" defer>
                 loadNow();
