@@ -3,13 +3,25 @@
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: local("Ubuntu Mono Italic"), local("UbuntuMono-Italic"), local("UbuntuMono-RI"), local("Ubuntu Mono"), url("/assets/css/ubuntu/UbuntuMono-RI.ttf");
+    src: local("Ubuntu Mono Italic"),
+         local("UbuntuMono-Italic"),
+         local("UbuntuMono-RI"),
+         local("Ubuntu Mono"),
+         url("/assets/css/ubuntu/woff2/UbuntuMono-RI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/UbuntuMono-RI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/UbuntuMono-RI.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu Mono";
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: local("Ubuntu Mono Bold Italic"), local("UbuntuMono-BoldItalic"), local("UbuntuMono-BI"), local("Ubuntu Mono"), url("/assets/css/ubuntu/UbuntuMono-BI.ttf");
+    src: local("Ubuntu Mono Bold Italic"),
+         local("UbuntuMono-BoldItalic"),
+         local("UbuntuMono-BI"),
+         local("Ubuntu Mono"),
+         url("/assets/css/ubuntu/woff2/UbuntuMono-BI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/UbuntuMono-BI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/UbuntuMono-BI.ttf") format("truetype");
 }
 
 
@@ -18,13 +30,25 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Ubuntu Mono"), local("UbuntuMono"), local("UbuntuMono-R"), local("Ubuntu Mono"), url("/assets/css/ubuntu/UbuntuMono-R.ttf");
+    src: local("Ubuntu Mono"),
+         local("UbuntuMono"),
+         local("UbuntuMono-R"),
+         local("Ubuntu Mono"),
+         url("/assets/css/ubuntu/woff2/UbuntuMono-R.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/UbuntuMono-R.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/UbuntuMono-R.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu Mono";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("Ubuntu Mono Bold"), local("UbuntuMono-Bold"), local("UbuntuMono-B"), local("Ubuntu Mono"), url("/assets/css/ubuntu/UbuntuMono-B.ttf");
+    src: local("Ubuntu Mono Bold"),
+         local("UbuntuMono-Bold"),
+         local("UbuntuMono-B"),
+         local("Ubuntu Mono"),
+         url("/assets/css/ubuntu/woff2/UbuntuMono-B.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/UbuntuMono-B.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/UbuntuMono-B.ttf") format("truetype");
 }
 
 
@@ -33,25 +57,49 @@
     font-style: italic;
     font-weight: 300;
     font-display: swap;
-    src: local("Ubuntu Light Italic"), local("Ubuntu-Light-Italic"), local("Ubuntu-LI"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-LI.ttf");
+    src: local("Ubuntu Light Italic"),
+         local("Ubuntu-Light-Italic"),
+         local("Ubuntu-LI"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-LI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-LI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-LI.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: local("Ubuntu Italic"), local("Ubuntu-Italic"), local("Ubuntu-RI"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-RI.ttf");
+    src: local("Ubuntu Italic"),
+         local("Ubuntu-Italic"),
+         local("Ubuntu-RI"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-RI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-RI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-RI.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Ubuntu"), local("Ubuntu-Medium-Italic"), local("Ubuntu-MI"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-MI.ttf");
+    src: local("Ubuntu"),
+         local("Ubuntu-Medium-Italic"),
+         local("Ubuntu-MI"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-MI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-MI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-MI.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: local("Ubuntu Bold Italic"), local("Ubuntu-BoldItalic"), local("Ubuntu-BI"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-BI.ttf");
+    src: local("Ubuntu Bold Italic"),
+         local("Ubuntu-BoldItalic"),
+         local("Ubuntu-BI"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-BI.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-BI.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-BI.ttf") format("truetype");
 }
 
 
@@ -60,23 +108,47 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: local("Ubuntu Light"), local("Ubuntu-Light"), local("Ubuntu-L"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-L.ttf");
+    src: local("Ubuntu Light"),
+         local("Ubuntu-Light"),
+         local("Ubuntu-L"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-L.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-L.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-L.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Ubuntu"), local("Ubuntu"), local("Ubuntu-R"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-R.ttf");
+    src: local("Ubuntu"),
+         local("Ubuntu"),
+         local("Ubuntu-R"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-R.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-R.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-R.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Ubuntu"), local("Ubuntu-Medium"), local("Ubuntu-M"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-M.ttf");
+    src: local("Ubuntu"),
+         local("Ubuntu-Medium"),
+         local("Ubuntu-M"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-M.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-M.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-M.ttf") format("truetype");
 } @font-face {
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("Ubuntu Bold"), local("Ubuntu-Bold"), local("Ubuntu-B"), local("Ubuntu"), url("/assets/css/ubuntu/Ubuntu-B.ttf");
+    src: local("Ubuntu Bold"),
+         local("Ubuntu-Bold"),
+         local("Ubuntu-B"),
+         local("Ubuntu"),
+         url("/assets/css/ubuntu/woff2/Ubuntu-B.woff2") format("woff2"),
+         url("/assets/css/ubuntu/woff/Ubuntu-B.woff") format("woff"),
+         url("/assets/css/ubuntu/ttf/Ubuntu-B.ttf") format("truetype");
 }
