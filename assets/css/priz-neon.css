@@ -492,7 +492,7 @@ div.photogrid {
 
 /* ---- Progress ---------------------------------------------------------------------------------------------------- */
 progress {
-    border: 2px solid var(--theme);
+    border: 2px solid var(--code-border);
     background-color: #0000;
     border-radius: 8px;
     vertical-align: text-bottom;
@@ -501,6 +501,7 @@ progress {
 progress::-moz-progress-bar,
 progress::-webkit-progress-value {
     background-color: var(--textarea-caret);
+    border-radius: 8px;
 } progress::-webkit-progress-bar {
     background-color: #0000;
 }
