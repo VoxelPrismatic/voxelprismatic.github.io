@@ -423,7 +423,7 @@ body {
 } input[type="radio"], input[type="checkbox"], input + label {
     cursor: pointer;
 } input[checked] + label {
-    font-style: bold;
+    font-weight: bold;
 }
 
 :not(#links_and_sources) > a[target="_blank"]::after {
