@@ -65,7 +65,7 @@ function fix_scale(img) {
         var w = img.width, h = img.height;
         var n = (h > iH) ? -2 : 0
         while((w * n < iW) && (h * n < iH))
-            n += 0.1
+            n += 0.01
         img.dataset.scale = n;
     }
     img.style.transform = "scale(" + n + ")";
