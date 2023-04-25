@@ -1,7 +1,7 @@
 /* ---- Base style -------------------------------------------------------------------------------------------------- */
 :root {
     --curve: cubic-bezier(0.5, 0, 0.25, 1.25);
-    --curve-dur: 0.5s;
+    --curve-dur: 0.75s;
 
     --radius-large-px: 5px;
     --radius-small-px: 2px;
@@ -18,8 +18,9 @@
     --shadow-img-px: 16px;
 
     /* ---- Calculations -------------------------------------------------------------------------------------------- */
+    --curve-dur-half: calc(var(--curve-dur) / 2);
     --curve-eq: var(--curve-dur) var(--curve) 0s;
-    --curve-eq-half: calc(var(--curve-dur) / 2) var(--curve) 0s;
+    --curve-eq-half: var(--curve-dur-half) var(--curve) 0s;
 
     --radius-lg: var(--radius-large-px) var(--radius-large-px) 0px 0px;
     --radius-sm: var(--radius-small-px) var(--radius-small-px) 0px 0px;
@@ -47,6 +48,7 @@
                 text-shadow var(--curve-eq),
                 filter var(--curve-eq),
                 bottom var(--curve-eq),
+                top var(--curve-eq),
                 z-index var(--curve-eq),
                 transform var(--curve-eq-half);
 } div {
@@ -447,6 +449,8 @@ body {
     bottom: -100px;
     z-index: 50;
     margin-bottom: 0px !important;
+    bottom: -100px;
+    padding-bottom: calc(var(--sect-padding) * 2) !important;
 } div.sect:last-child > div:last-child {
     margin-bottom: 30px !important;
 } nav > span {
@@ -463,9 +467,11 @@ body {
     cursor: pointer;
 } input[checked] + label {
     font-weight: bold;
+} nav.visible {
+    bottom: calc(0px - var(--sect-padding));
 }
 
-:not(#links_and_sources) > a[target="_blank"]::after {
+:not(#links_and_sources, nav, #funnytextthing) > a[target="_blank"]::after {
     display: inline-block;
     transition: opacity var(--curve-eq-half),
                 z-index var(--curve-eq-half);
@@ -492,8 +498,8 @@ body {
 }
 
 table img {
-    height: 128px;
-    width: 128px;
+    max-height: 96px;
+    max-width: 96px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     border-radius: var(--radius-large-px);
@@ -501,6 +507,7 @@ table img {
     z-index: 0;
     transform-origin: right;
     position: relative;
+    width: 100%;
 } table img:hover {
     transform: scale(3);
     z-index: 100;
@@ -536,6 +543,11 @@ progress {
     border-radius: 8px;
     vertical-align: text-bottom;
     height: 12px;
+    width: calc(100% - 60px);
+} progress:last-child {
+    width: calc(100% - var(--spacing));
+} progrss + label {
+    margin-left: var(--spacing);
 }
 progress::-moz-progress-bar,
 progress::-webkit-progress-value {
@@ -543,4 +555,36 @@ progress::-webkit-progress-value {
     border-radius: 8px;
 } progress::-webkit-progress-bar {
     background-color: #0000;
+}
+progress:has(+ label) {
+    width: calc(100% - 60px);
+}
+
+/* ---- /photos/ ---------------------------------------------------------------------------------------------------- */
+img[data-src] {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    top: 0px;
+    border-radius: var(--radius-large-px);
+    filter: none;
+} img.loaded.clicked {
+    box-shadow: 0px 0px 768px 240px #110008;
+    z-index: 100 !important;
+    top: var(--top);
+} img.blur {
+    filter: blur(2.5px) saturate(1);
+} img.blur.bw {
+    filter: blur(0px) saturate(0);
+} div.vert {
+    display: flex;
+} div.vert > img:last-child {
+    margin-left: var(--sect-padding);
+}
+
+img.loaded:hover,
+img.loaded:active,
+img.loaded:focus {
+    cursor: pointer;
+    z-index: 10;
 }

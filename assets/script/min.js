@@ -12,7 +12,7 @@ function doNothing(...o){}function allowKeyboard(o,e=doNothing){o.tabIndex="0",o
 function flickery_element(n){n==$("h1#head")&&n.clientHeight>54&&(console.log(n.clientHeight),console.log(n),n.style.setProperty("top",-n.clientHeight/2-54+"px","important")),delayFunction(function(n){n.style.transition="none"},1e3,1001,1e3,n);var t=!0,e=compSty(n).color;e="rgba("+e.split("(")[1].slice(0,-1)+", 0.7)";for(var o=1e3;o<=3e3;o+=Math.floor(200*Math.random())+25)(t=!t)?delayFunction(function(n){n.style.color=""},o,o+1,o,n):delayFunction(function(n){n.style.color=e},o,o+1,o,n);delayFunction(function(n){n.style.transition=""},o-25,o,5,n),delayFunction(function(n){n.style.color=e},o-50,o-49,o,n),delayFunction(function(n){n.style.color=""},o,o+1,o,n)}function flickery(){flickery_element(this)}window.setInterval(function(){flickery_element($("#head"))},15e3);
 
 // aesthetic/dynamic.js
-var is_IE=/(MSIE|Trident|OS ?X|macOS|iOS|iPadOS|iPad|iPod|iPhone|Safari)/i.test(window.navigator.userAgent),is_Chrome=/Chrome\//.test(window.navigator.userAgent);function jumpToEdge(e=0){window.navigator.vibrate([5]),window.setTimeout(e=>{globalThis.lastPosition=e},2e3,window.scrollY),"[Λ]"==$("#jumper").innerHTML?(is_IE?window.scrollTo(0,0):window.scrollTo({top:0,behavior:"smooth"}),$("#jumper").innerHTML="[V]"):(is_IE?window.scrollTo(0,document.body.scrollHeight):is_Chrome?$("#footer").scrollIntoView({block:"start",inline:"end",behavior:"smooth"}):window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"}),$("#jumper").innerHTML="[Λ]")}function resetUpdate(){shouldUpdate=!0}function changeScrollingThingy(e=null){var o=$("#jumper");if(null==e||null==e.deltaY){if(window.scrollY%2)return;window.scrollY/document.body.scrollHeight>=.5?(o.innerHTML="[Λ]",$("#nav").style.bottom="-100px"):(o.innerHTML="[V]",$("nav").style.bottom="0px")}else{var t=window.scrollY;o=$("#jumper");t>=document.body.scrollHeight-95?(o.innerHTML="[Λ]",$("nav").style.bottom="0px"):e.deltaY>0||t<=32?(o.innerHTML="[V]",$("nav").style.bottom="0px"):(o.innerHTML="[Λ]",$("nav").style.bottom="-100px")}shouldUpdate&&(updateSpacer(),shouldUpdate=!1,window.setTimeout(resetUpdate,500))}function getHeight(e){let o=compSty(e);var t=Number(o.height.slice(0,-2));return t+=Number(o.marginTop.slice(0,-2)),t+=Number(o.marginBottom.slice(0,-2))}function updateSpacer(e=!1){e||loadFooter(),spacer=$("#spacer"),spacer.style.transition="none",spacer.style.height="0px";for(var o=window.innerHeight,t=0;Number(compSty("body").height.slice(0,-2))+7<o;)spacer.style.height=t+"px",t+=1}shouldUpdate=!0;var sub_styles_timeout=!1;function sub_styles(e=!0){globalThis.sub_styles_timeout||(globalThis.sub_styles_timeout=!0,console.groupCollapsed("Reformatting page"),e&&$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),e&&$("table")&&(console.log("Styling tables"),logFunc(styleTables)),e&&$(".accent")&&(console.log("Moving accents"),logFunc(style_accents)),$("dict")&&logFunc(resizeDicts),$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),console.groupEnd("Reformatting page"),window.setTimeout(()=>globalThis.sub_styles_timeout=!1,100))}
+var is_IE=/(MSIE|Trident|OS ?X|macOS|iOS|iPadOS|iPad|iPod|iPhone|Safari)/i.test(window.navigator.userAgent),is_Chrome=/Chrome\//.test(window.navigator.userAgent);function jumpToEdge(e=0){window.navigator.vibrate([5]),window.setTimeout(e=>{globalThis.lastPosition=e},2e3,window.scrollY),"[Λ]"==$("#jumper").innerHTML?(is_IE?window.scrollTo(0,0):window.scrollTo({top:0,behavior:"smooth"}),$("#jumper").innerHTML="[V]"):(is_IE?window.scrollTo(0,document.body.scrollHeight):is_Chrome?$("#footer").scrollIntoView({block:"start",inline:"end",behavior:"smooth"}):window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"}),$("#jumper").innerHTML="[Λ]")}function resetUpdate(){shouldUpdate=!0}function changeScrollingThingy(e=null){var o=$("#jumper");if(null==e||null==e.deltaY){if(window.scrollY%2)return;window.scrollY/document.body.scrollHeight>=.5?(o.innerHTML="[Λ]",$("#nav").classList.remove("visible")):(o.innerHTML="[V]",$("nav").classList.add("visible"))}else{var t=window.scrollY;o=$("#jumper");t>=document.body.scrollHeight-95?(o.innerHTML="[Λ]",$("nav").classList.add("visible")):e.deltaY>0||t<=32?(o.innerHTML="[V]",$("nav").classList.add("visible")):(o.innerHTML="[Λ]",$("nav").classList.remove("visible"))}shouldUpdate&&(updateSpacer(),shouldUpdate=!1,window.setTimeout(resetUpdate,500))}function getHeight(e){let o=compSty(e);var t=Number(o.height.slice(0,-2));return t+=Number(o.marginTop.slice(0,-2)),t+=Number(o.marginBottom.slice(0,-2))}function updateSpacer(e=!1){e||loadFooter(),spacer=$("#spacer"),spacer.style.transition="none",spacer.style.height="0px";for(var o=window.innerHeight,t=0;Number(compSty("body").height.slice(0,-2))+7<o;)spacer.style.height=t+"px",t+=1}shouldUpdate=!0;var sub_styles_timeout=!1;function sub_styles(e=!0){globalThis.sub_styles_timeout||(globalThis.sub_styles_timeout=!0,console.groupCollapsed("Reformatting page"),e&&$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),e&&$("table")&&(console.log("Styling tables"),logFunc(styleTables)),e&&$(".accent")&&(console.log("Moving accents"),logFunc(style_accents)),$("dict")&&logFunc(resizeDicts),$("#spacer")&&(console.log("Resizing spacer"),logFunc(updateSpacer)),console.groupEnd("Reformatting page"),window.setTimeout(()=>globalThis.sub_styles_timeout=!1,100))}
 
 // aesthetic/colors.js
 function swapColor(c,s=!0){$("link[rel='stylesheet']").href="/assets/css/priz-"+c+".css";$("#truelogo").src="/assets/image/webp/priz_"+c+".webp";try{resizeDicts(!1)}catch(e){}try{setTransitions(!1)}catch(e){}window.setTimeout(resizeDicts(!1),100)}
@@ -28,13 +28,13 @@ function checkScrollPosition() {
     var elem = $("#jumper");
     if(y >= document.body.scrollHeight - 95) {
         elem.innerHTML = "[\u039b]";
-        $("nav").style.bottom = "0px";
+        $("nav").classList.add("visible");
     } else if(y > lastPosition || y <= 32) {
         elem.innerHTML = "[V]";
-        $("nav").style.bottom = "0px";
+        $("nav").classList.add("visible");
     } else {
         elem.innerHTML = "[\u039b]";
-        $("nav").style.bottom = "-100px";
+        $("nav").classList.remove("visible");
     }
     lastPosition = y;
 }
@@ -42,67 +42,62 @@ function checkScrollPosition() {
 async function loadNow() {
     globalThis.texts = await load("/assets/text/footer.txt", {list: true});
     document.body.insertAdjacentHTML("beforeend", patreon_nav);
-    if(document.URL.split("#")[0].split("?")[0].endsWith("voxelprismatic.github.io/")) {
-        var d = new Date();
-        var day = d.getDate();
-        switch(d.getMonth()) {
-            case 0: // January
+    var d = new Date();
+    var day = d.getDate();
+    switch(document.URL.split("#")[0].split("?")[0].endsWith("voxelprismatic.github.io/") ? d.getMonth() : -1) {
+        case 0: // January
+            swapColor("cyan");
+            break;
+        case 1: // February
+            if(day == 14) {
+                swapColor("pink");
+                $("#truelogo").src = "/assets/image/webp/holi/priz_heart.webp";
+                $("#head").innerHTML = "LOVE ;]";
+            } else {
                 swapColor("cyan");
-                break;
-            case 1: // February
-                if(day == 14) {
-                    swapColor("pink");
-                    $("#truelogo").src = "/assets/image/webp/holi/priz_heart.webp";
-                    $("#head").innerHTML = "LOVE ;]";
-                } else {
-                    swapColor("cyan");
-                }
-                break;
-            case 2: // March
-                swapColor("cyan");
-                break;
-            case 3: // April
-                swapColor("cyan");
-                break;
-            case 4: // May
-                swapColor("cyan");
-                break;
-            case 5: // June
-                swapColor("cyan");
-                break;
-            case 6: // July
-                swapColor("cyan");
-                break;
-            case 7: // August
-                swapColor("cyan");
-                break;
-            case 8: // September
-                swapColor("cyan");
-                break;
-            case 9: // October
-                swapColor("orange");
-                $("#truelogo").src = "/assets/image/webp/holi/priz_spook.webp";
-                $("#head").innerHTML = "SPOOK ;]";
-                break;
-            case 10: // November
-                swapColor("cyan");
-                if(day == 11) {
-                    $("#truelogo").src = "/assets/image/webp/holi/priz_bday.webp";
-                    $("#head").innerHTML = "BDAY ;]";
-                }
-                break;
-            case 11:
-                // December -- Festive
-                swapColor("cyan");
-                $("#truelogo").src = "/assets/image/webp/holi/priz_xmas.webp";
-                $("#head").innerHTML = "FESTIVE ;]";
-                break;
-            default:
-                swapColor("red");
-                $("#head").innerHTML = "13th MONTH?";
-        }
-    } else {
-        swapColor(theme);
+            }
+            break;
+        case 2: // March
+            swapColor("cyan");
+            break;
+        case 3: // April
+            swapColor("cyan");
+            break;
+        case 4: // May
+            swapColor("cyan");
+            break;
+        case 5: // June
+            swapColor("cyan");
+            break;
+        case 6: // July
+            swapColor("cyan");
+            break;
+        case 7: // August
+            swapColor("cyan");
+            break;
+        case 8: // September
+            swapColor("cyan");
+            break;
+        case 9: // October
+            swapColor("orange");
+            $("#truelogo").src = "/assets/image/webp/holi/priz_spook.webp";
+            $("#head").innerHTML = "SPOOK ;]";
+            break;
+        case 10: // November
+            swapColor("cyan");
+            if(day == 11) {
+                $("#truelogo").src = "/assets/image/webp/holi/priz_bday.webp";
+                $("#head").innerHTML = "BDAY ;]";
+            }
+            break;
+        case 11:
+            // December -- Festive
+            swapColor("cyan");
+            $("#truelogo").src = "/assets/image/webp/holi/priz_xmas.webp";
+            $("#head").innerHTML = "FESTIVE ;]";
+            break;
+        default:
+            swapColor(theme);
     }
     if($("#jumper")) {
         if(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile)/i.test(window.navigator.userAgent)) {
