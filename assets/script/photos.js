@@ -20,7 +20,7 @@ function next_pic() {
         next_pic();
     };
     img.className = "blur";
-    img.src = img.datatset.src + "-med.webp";
+    img.src = img.dataset.src + "-med.webp";
     console.log(img.src);
 }
 
@@ -28,7 +28,7 @@ function smol_pic() {
     if(pics.length) {
         var img = pics.pop();
         img.onload = () => { smol_pic() };
-        img.src = img.datatset.src + "-smol.webp";
+        img.src = img.dataset.src + "-smol.webp";
         return console.log(img.src)
     }
 
