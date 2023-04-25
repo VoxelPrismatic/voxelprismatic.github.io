@@ -50,7 +50,10 @@
                 bottom var(--curve-eq),
                 top var(--curve-eq),
                 z-index var(--curve-eq),
-                transform var(--curve-eq-half);
+                transform var(--curve-eq-half),
+                border var(--curve-eq),
+                padding var(--curve-eq),
+                border-radius var(--curve-eq);
 } div {
     line-height: 1.5;
 }
@@ -523,6 +526,10 @@ img[controls] {
 /* ---- Photos ------------------------------------------------------------------------------------------------------ */
 div.album img {
     max-width: 100%;
+    display: block;
+    margin-bottom: var(--sect-padding);
+} div.album img + br {
+    display: none;
 }
 
 div.photogrid {
@@ -570,9 +577,17 @@ img[data-src] {
     top: 0px;
     border-radius: var(--radius-large-px);
     filter: none;
+    border: 0px solid #0000;
 } img.loaded.clicked {
     box-shadow: 0px 0px 768px 240px #110008;
     z-index: 100 !important;
+    padding: 0px;
+    border-radius: calc(var(--radius-large-px) * 2);
+    border: 2px solid #000;
+} img.loaded.clicked:not(.blur) {
+    background: linear-gradient(150deg, #f08, #0f8 15%, #0ff 85%, #80f 100%);
+    padding: 2px;
+    border-width: 0px;
 } img.blur {
     filter: blur(2.5px) saturate(1);
 } img.blur.bw {
@@ -581,8 +596,6 @@ img[data-src] {
     display: flex;
 } div.vert > img:last-child {
     margin-left: var(--sect-padding);
-} .album img {
-    margin-bottom: var(--sect-padding);
 }
 
 img.loaded:hover,
@@ -591,3 +604,5 @@ img.loaded:focus {
     cursor: pointer;
     z-index: 10;
 }
+
+
