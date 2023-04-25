@@ -71,6 +71,11 @@ function fix_scale(img) {
     img.style.transform = "scale(" + n + ")";
     img.classList.add("blur");
     window.setTimeout((img) => img.src = img.dataset.src, 750, img);
+    img.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+    })
 }
 
 function img_zoom(img) {
@@ -79,13 +84,6 @@ function img_zoom(img) {
 
     if(img.classList.toggle("clicked")) {
         no_zoom(img);
-        img.classList.add("blur");
-        img.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center"
-        })
-
         fix_scale(img);
     } else {
         img.style.transform = "";
