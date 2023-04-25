@@ -508,6 +508,7 @@ table img {
     aspect-ratio: 1 / 1;
     object-fit: contain;
     border-radius: var(--radius-large-px);
+    transform: scale(1);
     transition: all var(--curve-eq-half) !important;
     z-index: 0;
     transform-origin: right;
