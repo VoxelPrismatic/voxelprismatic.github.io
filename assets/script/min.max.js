@@ -18,7 +18,56 @@ var is_IE=/(MSIE|Trident|OS ?X|macOS|iOS|iPadOS|iPad|iPod|iPhone|Safari)/i.test(
 function swapColor(c,s=!0){$("link[rel='stylesheet']").href="/assets/css/priz-"+c+".css";$("#truelogo").src="/assets/image/webp/priz_"+c+".webp";try{resizeDicts(!1)}catch(e){}try{setTransitions(!1)}catch(e){}window.setTimeout(resizeDicts(!1),100)}
 
 // load-min.js
-function finish_load(){if($("#jumper")){window.onwheel=(evt)=>changeScrollingThingy(evt);window.ontouchmove=changeScrollingThingy}window.onclick=changeFunnyTextThing;window.onauxclick=changeFunnyTextThing;changeFunnyTextThing();window.onresize=()=>sub_styles(false);for(var elem of $$("h1,h2,h3,h4,h5,h6")){elem.onclick=(evt)=>linkMe(evt.currentTarget);elem.onfocus=(evt)=>flickery_element(evt.currentTarget)}var h1=$("h1#head");var fS=getComputedStyle(h1).fontSize;if(fS=="48px"){return a11y()}h1.style.transition="none";if(navigator.userAgent.includes("Android")){var scales={"38.4px":"60px","43.2px":"54px","52.8px":"47px","62.4px":"40px","72px":"34px","81.6px":"30px","96px":"26px"};if(scales[fS]){h1.style.fontSize=scales[fS]}fS=getComputedStyle(h1).fontSize}var fN=Number(fS.slice(0,-2));if(fN<48||fN>52){n=Math.round(fS.slice(0,-2));while(Number(getComputedStyle(h1).fontSize.slice(0,-2))<48&&n<100){n+=1;h1.style.fontSize=n+"px"}while(Number(getComputedStyle(h1).fontSize.slice(0,-2))>52){n-=1;h1.style.fontSize=n+"px"}}h1.style.transition="";a11y()}
+function finish_load() {
+    if($("#jumper")) {
+        window.onwheel = (evt) => changeScrollingThingy(evt);
+        window.ontouchmove = changeScrollingThingy;
+    }
+    window.onclick = changeFunnyTextThing;
+    window.onauxclick = changeFunnyTextThing;
+    changeFunnyTextThing();
+    window.onresize = () => sub_styles(false);
+    for(var elem of $$("h1,h2,h3,h4,h5,h6")) {
+        elem.onclick = (evt) => linkMe(evt.currentTarget);
+        elem.onfocus = (evt) => flickery_element(evt.currentTarget);
+    }
+    var h1 = $("h1#head");
+    var fS = getComputedStyle(h1).fontSize
+
+    if(fS == "48px")
+        return a11y();
+
+    h1.style.transition = "none"
+
+    if(navigator.userAgent.includes("Android")) {
+        var scales = {
+            "38.4px": "60px",
+            "43.2px": "54px",
+            "52.8px": "47px",
+            "62.4px": "40px",
+            "72px": "34px",
+            "81.6px": "30px",
+            "96px": "26px"
+        }
+        if(scales[fS])
+            h1.style.fontSize = scales[fS];
+        fS = getComputedStyle(h1).fontSize;
+    }
+    var fN = Number(fS.slice(0, -2))
+    if(fN < 48 || fN > 52) {
+        n = Math.round(fS.slice(0, -2));
+        while(Number(getComputedStyle(h1).fontSize.slice(0, -2)) < 48 && n < 100) {
+            n += 1;
+            h1.style.fontSize = n + "px";
+        }
+        while(Number(getComputedStyle(h1).fontSize.slice(0, -2)) > 52) {
+            n -= 1;
+            h1.style.fontSize = n + "px";
+        }
+    }
+    h1.style.transition = "";
+    a11y();
+}
 
 async function loadNow() {
     globalThis.texts = await load("/assets/text/footer.txt", {list: true});
@@ -27,13 +76,6 @@ async function loadNow() {
     var day = d.getDate();
     switch(document.URL.split("#")[0].split("?")[0].endsWith("voxelprismatic.github.io/") ? d.getMonth() : -1) {
         case 0: // January
-        case 2: // March
-        case 3: // April
-        case 4: // May
-        case 5: // June
-        case 6: // July
-        case 7: // August
-        case 8: // September
             swapColor("cyan");
             break;
         case 1: // February
@@ -44,6 +86,27 @@ async function loadNow() {
             } else {
                 swapColor("cyan");
             }
+            break;
+        case 2: // March
+            swapColor("cyan");
+            break;
+        case 3: // April
+            swapColor("cyan");
+            break;
+        case 4: // May
+            swapColor("cyan");
+            break;
+        case 5: // June
+            swapColor("cyan");
+            break;
+        case 6: // July
+            swapColor("cyan");
+            break;
+        case 7: // August
+            swapColor("cyan");
+            break;
+        case 8: // September
+            swapColor("cyan");
             break;
         case 9: // October
             swapColor("orange");

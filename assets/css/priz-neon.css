@@ -291,6 +291,7 @@ dict {
     box-shadow: var(--theme) var(--shadow-small);
     margin: 0px;
     z-index: 100;
+    font-size: 200%;
 } #jumper:hover, #jumper:focus {
     text-shadow: var(--shadow-small);
 }
@@ -406,6 +407,7 @@ h5:hover, h5:focus, h6:hover, h6:focus {
 } @media only screen and (min-width: 780px) {
     nav > span { float: right !important; }
     table img { transform-origin: center !important; }
+    #jumper { font-size: 100%; }
 }
 
 .sect, .tab {
@@ -571,7 +573,6 @@ img[data-src] {
 } img.loaded.clicked {
     box-shadow: 0px 0px 768px 240px #110008;
     z-index: 100 !important;
-    top: var(--top);
 } img.blur {
     filter: blur(2.5px) saturate(1);
 } img.blur.bw {
