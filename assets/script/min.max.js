@@ -18,8 +18,29 @@ var is_IE=/(MSIE|Trident|OS ?X|macOS|iOS|iPadOS|iPad|iPod|iPhone|Safari)/i.test(
 function swapColor(c,s=!0){$("link[rel='stylesheet']").href="/assets/css/priz-"+c+".css";$("#truelogo").src="/assets/image/webp/priz_"+c+".webp";try{resizeDicts(!1)}catch(e){}try{setTransitions(!1)}catch(e){}window.setTimeout(resizeDicts(!1),100)}
 
 // load-min.js
+var lastPosition = 0;
+var is_Mobile = /(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile)/i.test(window.navigator.userAgent);
+function checkScrollPosition() {
+    var y = window.scrollY;
+    if(y == lastPosition)
+        return;
+    var elem = $("#jumper");
+    if(y >= document.body.scrollHeight - 95) {
+        elem.innerHTML = "[\u039b]";
+        $("nav").classList.add("visible");
+    } else if(y > lastPosition || y <= 32) {
+        elem.innerHTML = "[V]";
+        $("nav").classList.add("visible");
+    } else {
+        elem.innerHTML = "[\u039b]";
+        $("nav").classList.remove("visible");
+    }
+    lastPosition = y;
+}
 function finish_load() {
     if($("#jumper")) {
+        if(is_Mobile)
+            window.setInterval(checkScrollPosition, 100);
         window.onwheel = (evt) => changeScrollingThingy(evt);
         window.ontouchmove = changeScrollingThingy;
     }
