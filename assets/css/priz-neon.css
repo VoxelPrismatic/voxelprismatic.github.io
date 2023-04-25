@@ -580,6 +580,8 @@ img[data-src] {
     display: flex;
 } div.vert > img:last-child {
     margin-left: var(--sect-padding);
+} .album img {
+    margin-bottom: var(--sect-padding);
 }
 
 img.loaded:hover,

@@ -7,7 +7,7 @@ function get_pic() {
 }
 
 function next_pic() {
-    if(!pic_src.length) {
+    if(!pics.length) {
         console.timeEnd("Loading - Medium pics");
         return console.groupEnd("Medium img URLs");
     }
