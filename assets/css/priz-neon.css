@@ -578,6 +578,7 @@ img[data-src] {
     border-radius: var(--radius-large-px);
     filter: none;
     border: 0px solid #0000;
+    transform: scale(1);
 } img.loaded.clicked {
     box-shadow: 0px 0px 768px 240px #110008;
     z-index: 100 !important;
@@ -596,6 +597,9 @@ img[data-src] {
     display: flex;
 } div.vert > img:last-child {
     margin-left: var(--sect-padding);
+    transform-origin: right;
+} div.vert > img:first-child {
+    transform-origin: left;
 }
 
 img.loaded:hover,
