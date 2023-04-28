@@ -53,7 +53,8 @@
                 transform var(--curve-eq-half),
                 border var(--curve-eq),
                 padding var(--curve-eq),
-                border-radius var(--curve-eq);
+                border-radius var(--curve-eq),
+                background var(--curve-eq);
 } div {
     line-height: 1.5;
 }
@@ -514,10 +515,12 @@ table img {
     transform-origin: right;
     position: relative;
     width: 100%;
+    background: #0000;
 } table img:hover {
     transform: scale(3);
     z-index: 100;
     box-shadow: #000 var(--shadow-img);
+    background: #000;
 }
 
 img[controls] {
