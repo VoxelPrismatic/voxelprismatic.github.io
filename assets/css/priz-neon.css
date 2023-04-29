@@ -81,7 +81,7 @@ textarea {
     caret-color: var(--textarea-caret);
     border-style: solid;
     border-width: var(--sect-border);
-    border-color: var(--textarea-border) var(--textarea-border) #0000;
+    border-color: var(--textarea-border) var(--textarea-border) var(--bg);
     border-radius: var(--radius-lg);
     padding: var(--spacing);
     color: #fff;
@@ -146,7 +146,7 @@ th {
 th:first-child, td:first-child {
     border-left-width: var(--sect-border);
 } tr:last-child td {
-    border-bottom: 2px solid #0000;
+    border-bottom: 2px solid var(--bg);
 }
 
 /* ---- List elements ----------------------------------------------------------------------------------------------- */
@@ -172,7 +172,7 @@ al > li::marker {
 spoil {
     border-style: solid;
     border-width: var(--sect-border);
-    border-color: var(--spoil-border) var(--spoil-border) #0000;
+    border-color: var(--spoil-border) var(--spoil-border) var(--bg);
     border-radius: var(--radius-lg);
     background-color: var(--spoil-bg);
     font-size: smaller;
@@ -192,7 +192,7 @@ codeblock,
 codeline {
     border-style: solid;
     border-width: var(--sect-border);
-    border-color: var(--code-border) var(--code-border) #0000;
+    border-color: var(--code-border) var(--code-border) var(--bg);
     border-radius: var(--radius-lg);
     background-color: var(--code-bg);
     margin: var(--spacing);
@@ -293,13 +293,13 @@ dict {
     bottom: 0px;
     right: 0px;
     font-family: "Ubuntu Mono", mono;
-    background-color: inherit;
-    box-shadow: var(--theme) var(--shadow-small);
+    background-color: var(--spoil-bg);
     margin: 0px;
     z-index: 100;
     font-size: 200%;
 } #jumper:hover, #jumper:focus {
     text-shadow: var(--shadow-small);
+    box-shadow: var(--theme) var(--shadow-small);
 }
 
 .emoji {
@@ -362,7 +362,7 @@ dict {
 .sect {
     border-style: solid;
     border-width: var(--sect-border);
-    border-color: var(--theme) var(--theme) #0000;
+    border-color: var(--theme) var(--theme) var(--bg);
     border-radius: var(--radius-lg);
     margin: var(--spacing) 0px var(--spacing) var(--sect-margin);
     text-align: justify;
@@ -420,6 +420,7 @@ h5:hover, h5:focus, h6:hover, h6:focus {
     width: var(--max-width);
 } img {
     max-width: var(--max-width);
+    border-radius: var(--radius-large-px);
 }
 
 
@@ -471,6 +472,7 @@ body {
     cursor: pointer;
 } nav > span:hover {
     opacity: 80%;
+    text-shadow: var(--shadow-small);
 } input[type="radio"], input[type="checkbox"], input + label {
     cursor: pointer;
 } input[checked] + label {
@@ -495,7 +497,7 @@ body {
     margin-left: var(--spacing-sm-neg);
     border-radius: var(--radius-lg);
     border: var(--sect-border) solid;
-    border-color: var(--spoil-border) var(--spoil-border) #0000;
+    border-color: var(--spoil-border) var(--spoil-border) var(--bg);
     height: 16px;
     opacity: 0;
     transform: scale(0.6);
@@ -503,6 +505,8 @@ body {
 } a[target="_blank"]:hover::after {
     opacity: 1 !important;
     z-index: 1000 !important;
+} #funnytextthing > img {
+    display: revert;
 }
 
 table img {
@@ -549,6 +553,7 @@ div.photogrid {
     border-radius: var(--radius-large-px);
     width: 100%;
     cursor: pointer;
+    transition: all var(--curve-eq-half) !important;
 }
 
 /* ---- Progress ---------------------------------------------------------------------------------------------------- */
