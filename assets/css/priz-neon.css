@@ -145,6 +145,8 @@ th {
 
 th:first-child, td:first-child {
     border-left-width: var(--sect-border);
+} tr:last-child td {
+    border-bottom: 2px solid #0000;
 }
 
 /* ---- List elements ----------------------------------------------------------------------------------------------- */
@@ -520,7 +522,7 @@ table img {
     transform: scale(3);
     z-index: 100;
     box-shadow: #000 var(--shadow-img);
-    background: #000;
+    background: #000e;
 }
 
 img[controls] {
