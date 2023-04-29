@@ -70,7 +70,7 @@ async function loadNow() {
     }
     finish_load();
 
-    cited_sources=typeof cited_sources=="undefined"?[]:cited_sources;
+    try{cited_sources}catch(err){var cited_sources=[]}
     for(var c_n in cited_sources){for(var elem of $$(`[data-cite="${c_n}"]`)){elem.href=cited_sources[c_n];elem.setAttribute("target","_blank")}}
 }
 

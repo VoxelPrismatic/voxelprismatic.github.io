@@ -152,7 +152,11 @@ async function loadNow() {
     }
     finish_load();
 
-    cited_sources = typeof cited_sources == "undefined" ? [] : cited_sources;
+    try {
+        cited_sources;
+    } catch(err) {
+        var cited_sources=[];
+    }
     for(var cite_number in cited_sources) {
         for(var elem of $$(`[data-cite="${cite_number}"]`)) {
             elem.href = cited_sources[cite_number];
