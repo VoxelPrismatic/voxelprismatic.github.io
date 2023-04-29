@@ -151,6 +151,14 @@ async function loadNow() {
             swapColor(theme);
     }
     finish_load();
+
+    cited_sources = typeof cited_sources == "undefined" ? [] : cited_sources;
+    for(var cite_number in cited_sources) {
+        for(var elem of $$(`[data-cite="${cite_number}"]`)) {
+            elem.href = cited_sources[cite_number];
+            elem.setAttribute("target", "_blank");
+        }
+    }
 }
 
 var patreon_nav = `
@@ -170,10 +178,3 @@ for(var q of $$("spoil"))
 for(var img of $$("table img"))
     img.onclick = (evt) => window.open(evt.currentTarget.src, "_blank");
 
-cited_sources = typeof cited_sources == "undefined" ? [] : cited_sources;
-for(var cite_number in cited_sources) {
-    for(var elem of $$(`[data-cite="${cite_number}"]`)) {
-        elem.href = cited_sources[cite_number];
-        elem.setAttribute("target", "_blank");
-    }
-}
