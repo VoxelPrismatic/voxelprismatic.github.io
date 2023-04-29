@@ -469,7 +469,11 @@
             <script type="text/javascript">
                 var theme = "sea";
                 var loader = "politics_gun";
+            </script>
 
+            <a id="hiddenlink" tabindex="0" href="/"></a>
+            <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>
+            <script type="text/javascript" defer>
                 const cited_sources = {
                     "1": "https://web.archive.org/web/20230314150810/https://wirepoints.org/wp-content/uploads/2023/02/Chicago-New-Orleans-were-the-nations-murder-capitals-in-2022-Wirepoints-Special-Report.pdf",
                     "2": "https://www.cnn.com/election/2020/results/state/new-york",
@@ -480,28 +484,24 @@
                     "7": "https://web.archive.org/web/20230425015536/https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/expanded-homicide-data-table-8.xls"
                 }
                 for(var cite_number in cited_sources) {
-                    for(var elem of document.querySelectorAll(`[data-cite="${cite_number}"]`)) {
+                    for(var elem of $$(`[data-cite="${cite_number}"]`)) {
                         elem.href = cited_sources[cite_number];
                         elem.setAttribute("target", "_blank");
                     }
                 }
 
-                for(var img of $("table img"))
+                for(var img of $$("table img"))
                     img.onclick = (evt) => window.open(evt.currentTarget.src, "_blank");
 
-                document.querySelector("#tbl-sel-ttl").onchange = (evt) => {
+                $("#tbl-sel-ttl").onchange = (evt) => {
                     $("#tbl-ttl-homicide").style.display = "";
                     $("#tbl-100k-homicide").style.display = "none";
                 }
-                document.querySelector("#tbl-sel-100k").onchange = (evt) => {
+                $("#tbl-sel-100k").onchange = (evt) => {
                     $("#tbl-ttl-homicide").style.display = "none";
                     $("#tbl-100k-homicide").style.display = "";
                 }
-                document.querySelector("#tbl-sel-ttl").checked = true;
-            </script>
-            <a id="hiddenlink" tabindex="0" href="/"></a>
-            <script type="text/javascript" src="/assets/script/min.js" id="min.js"></script>
-            <script type="text/javascript" defer>
+                $("#tbl-sel-ttl").checked = true;
                 loadNow();
             </script>
             <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">

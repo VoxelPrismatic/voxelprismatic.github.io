@@ -404,7 +404,7 @@ h5:hover, h5:focus, h6:hover, h6:focus {
 :root {
     --max-width: 90vw;
 } @media only screen and (min-width: 580px) {
-    :root { --max-width: 576px; }
+    :root { --max-width: 540px; }
 } @media only screen and (min-width: 640px) {
     :root { --max-width: 620px; }
 } @media only screen and (min-width: 720px) {
