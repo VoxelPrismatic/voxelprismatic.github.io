@@ -139,8 +139,9 @@ th {
     border-spacing: 0px;
 } blockquote {
     margin: 0px var(--spacing) var(--spacing-neg);
-    padding: var(--spacing) var(--sect-padding);
-    border-left: var(--sect-border) solid var(--theme);
+    padding: var(--spacing-sm) var(--sect-padding);
+    border: var(--sect-border) solid;
+    border-color: var(--bg) var(--bg) var(--bg) var(--theme);
 }
 
 th:first-child, td:first-child {
@@ -547,8 +548,6 @@ div.photogrid {
     column-gap: 8px;
     row-gap: 4px;
     grid-template-columns: auto auto;
-} div.photogrid > div {
-    display: inline-grid;
 } div.photogrid img {
     border-radius: var(--radius-large-px);
     width: 100%;
