@@ -1,6 +1,7 @@
 /* ---- Base style -------------------------------------------------------------------------------------------------- */
 :root {
     --curve: cubic-bezier(0.5, 0, 0.25, 1.25);
+    --curve-flat: cubic-bezier(0.5, 0, 0.25, 1);
     --curve-dur: 0.75s;
 
     --radius-large-px: 5px;
@@ -20,7 +21,9 @@
     /* ---- Calculations -------------------------------------------------------------------------------------------- */
     --curve-dur-half: calc(var(--curve-dur) / 2);
     --curve-eq: var(--curve-dur) var(--curve) 0s;
+    --curve-eq-flat: var(--curve-dur) var(--curve-flat) 0s;
     --curve-eq-half: var(--curve-dur-half) var(--curve) 0s;
+    --curve-eq-flat-half: var(--curve-dur-half) var(--curve-flat) 0s;
 
     --radius-lg: var(--radius-large-px) var(--radius-large-px) 0px 0px;
     --radius-sm: var(--radius-small-px) var(--radius-small-px) 0px 0px;
@@ -43,7 +46,7 @@
 } * {
     font-family: "Ubuntu", sans-serif;
     transition: color var(--curve-eq),
-                opacity var(--curve-eq),
+                opacity var(--curve-eq-flat),
                 box-shadow var(--curve-eq),
                 text-shadow var(--curve-eq),
                 filter var(--curve-eq),
@@ -51,8 +54,8 @@
                 top var(--curve-eq),
                 z-index var(--curve-eq),
                 transform var(--curve-eq-half),
-                border var(--curve-eq),
-                padding var(--curve-eq),
+                border var(--curve-eq-flat),
+                padding var(--curve-eq-flat),
                 border-radius var(--curve-eq),
                 background var(--curve-eq);
 } div {
@@ -368,8 +371,6 @@ dict {
     margin: var(--spacing) 0px var(--spacing) var(--sect-margin);
     text-align: justify;
     padding: var(--sect-padding);
-    /*! height: 100px; */
-    /*! padding-bottom: 100px; */
 }
 
 
@@ -517,17 +518,22 @@ table img {
     object-fit: contain;
     border-radius: var(--radius-large-px);
     transform: scale(1);
-    transition: all var(--curve-eq-half) !important;
+    transition: all var(--curve-eq-flat-half), transform var(--curve-eq-half) !important;
     z-index: 0;
     transform-origin: right;
     position: relative;
     width: 100%;
     background: #0000;
+    backdrop-filter: blur(5px);
+    padding: 0px;
+    margin: 0px;
 } table img:hover {
     transform: scale(3);
     z-index: 100;
-    box-shadow: #000 var(--shadow-img);
-    background: #000e;
+    box-shadow: #000 var(--shadow-large);
+    background: #0008;
+    padding: 10px;
+    margin: -10px;
 }
 
 img[controls] {
@@ -552,7 +558,7 @@ div.photogrid {
     border-radius: var(--radius-large-px);
     width: 100%;
     cursor: pointer;
-    transition: all var(--curve-eq-half) !important;
+    transition: all var(--curve-eq-flat-half), transform var(--curve-eq-half) !important;
 }
 
 /* ---- Progress ---------------------------------------------------------------------------------------------------- */
@@ -574,9 +580,6 @@ progress::-webkit-progress-value {
     border-radius: 8px;
 } progress::-webkit-progress-bar {
     background-color: #0000;
-}
-progress:has(+ label) {
-    width: calc(100% - 60px);
 }
 
 /* ---- /photos/ ---------------------------------------------------------------------------------------------------- */

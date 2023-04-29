@@ -81,3 +81,7 @@ async function load(e,n=!1,t=!1,a=!1){e.endsWith("error.html")?$("#head").innerH
 
 for(var q of $$("input + label")){q.onclick=(evt)=>evt.currentTarget.previousElementSibling.click()}
 for(var q of $$("spoil")){q.onclick=(evt)=>evt.currentTarget.classList.toggle('unhide')}
+for(var img of $$("table img")){img.onclick=(evt)=>window.open(evt.currentTarget.src,"_blank")}
+
+var cited_sources=typeof cited_sources=="undefined"?[]:cited_sources;
+for(var c_n in cited_sources){for(var elem of $$(`[data-cite="${c_n}"]`)){elem.href=cited_sources[c_n];elem.setAttribute("target","_blank")}}
