@@ -215,7 +215,7 @@ var patreon_nav = `
 
 var firefox_nav = `
 <nav class="sect">
-    <span onclick="the_sads()">X</span>
+    <span title="Nope, I really want you to switch.\nChrome is actually a pain and doesn't follow any standards.\nHelp make my life easier by switching today.">&#x221a;</span>
     Consider switching to <a href='https://firefox.com/' target='_blank'>Firefox</a>!
 </nav>`
 
