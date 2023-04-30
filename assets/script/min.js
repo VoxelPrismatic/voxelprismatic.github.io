@@ -52,7 +52,7 @@ function changeScrollingThingy(evt = null) {
     $("#jumper").innerHTML = (top_test || dir_test) ? "[\u039b]" : "[V]";
     $("nav").style.bottom = (top_test || !dir_test) ? "0px" : "-100px";
 
-    if(!shouldUpdate) {
+    if(!shouldUpdate)
         return
     updateSpacer();
     shouldUpdate = false;
