@@ -9,10 +9,10 @@ var is_Mobile = /(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|
 // Flicker
 function flickery_element(h) {
     h.classList.add("flicker")
-    for(var x = 500; x <= 2000; x += Math.floor(Math.random() * 200) + 50)
+    for(var x = 500; x <= 2000; x += Math.floor(Math.random() * 150) + 75)
         window.setTimeout((h) => h.classList.toggle("dim"), x, h);
     window.setTimeout((h) => h.classList.remove("flicker"), x + 5, h);
-    window.setTimeout((h) => h.classList.add("dim"), x, h);
+    window.setTimeout((h) => h.classList.add("dim"), x + 1, h);
     window.setTimeout((h) => h.classList.remove("dim"), x + 10, h);
 }
 function flickery() {
@@ -32,6 +32,7 @@ function jumpToEdge(delayed = 0) {
     else
         window.scrollTo({top: to_top ? 0 : document.body.clientHeight, behavior: "smooth"});
     $("#jumper").innerHTML = to_top ? "[V]" : "[\u039b]";
+    $("nav").classList.add("visible");
 }
 
 function resetUpdate() {
@@ -39,8 +40,6 @@ function resetUpdate() {
 }
 
 function changeScrollingThingy(evt = null) {
-    if(window.scrollY % 2)
-        return;
     var y = window.scrollY;
     var max_y = document.body.clientHeight - window.innerHeight;
     if(evt?.deltaY)
@@ -48,9 +47,8 @@ function changeScrollingThingy(evt = null) {
     else
         var dir_test = y / max_y >= 0.5;
     var top_test = y >= max_y - 95;
-    console.log(evt.deltaY, dir_test, top_test);
     $("#jumper").innerHTML = (top_test || dir_test) ? "[\u039b]" : "[V]";
-    $("nav").style.bottom = (top_test || !dir_test) ? "0px" : "-100px";
+    $("nav").classList.toggle("visible", top_test || !dir_test);
 
     if(!shouldUpdate)
         return
@@ -73,18 +71,15 @@ function updateSpacer(dontLoad = false) {
 // Colors
 function swapColor(c,s=!0){
     if(!$("link[rel='stylesheet']").href.includes("priz-" + c + ".css"))
-        $("link[rel='stylesheet']").href ="/assets/css/priz-"+c+".css";
-    $("#truelogo").src="/assets/image/webp/priz_"+c+".webp";
-    try{resizeDicts(!1)}catch(e){}
-    try{setTransitions(!1)}catch(e){}
-    window.setTimeout(resizeDicts(!1),100)
+        $("link[rel='stylesheet']").href = "/assets/css/priz-" + c +".css";
+    $("#truelogo").src="/assets/image/webp/priz_" + c + ".webp";
 }
 
 // Load
 function finish_load() {
     if($("#jumper")) {
         window.onwheel = (evt) => changeScrollingThingy(evt);
-        window.ontouchmove = changeScrollingThingy;
+        window.ontouchmove = (evt) => changeScrollingThingy(evt);
     }
     window.onclick = changeFunnyTextThing;
     window.onauxclick = changeFunnyTextThing;
@@ -197,7 +192,7 @@ async function loadNow() {
     try {
         cited_sources;
     } catch(err) {
-        var cited_sources=[];
+        var cited_sources = [];
     }
     for(var cite_number in cited_sources) {
         for(var elem of $$(`[data-cite="${cite_number}"]`)) {
@@ -205,6 +200,8 @@ async function loadNow() {
             elem.setAttribute("target", "_blank");
         }
     }
+
+    $("nav").classList.add("visible");
 }
 
 var patreon_nav = `
@@ -240,7 +237,8 @@ function linkMe(elem) {
 var texts = [];
 
 function changeFunnyTextThing() {
-    var options = texts.slice(0).splice(texts.indexOf($("#funnytextthing").innerHTML), 1);
+    var options = texts.slice(0);
+    options.splice(Math.max(texts.indexOf($("#funnytextthing").innerHTML), 0), 1);
     $("#funnytextthing").innerHTML = options[Math.floor(Math.random() * options.length)];
     updateSpacer();
 }
