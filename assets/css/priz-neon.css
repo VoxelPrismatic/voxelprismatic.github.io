@@ -69,8 +69,8 @@ body {
     background-color: #111;
 }
 
-body, div:not(#logo), span, i, b,
-u, s, blockquote, sup, sub {
+body, div:not(#logo), i, b, u, s,
+blockquote, sup, sub, progress {
     transition: none;
 }
 
@@ -621,8 +621,10 @@ progress {
 } progrss + label {
     margin-left: var(--spacing);
 }
-progress::-moz-progress-bar,
-progress::-webkit-progress-value {
+progress::-moz-progress-bar {
+    background-color: var(--textarea-caret);
+    border-radius: 8px;
+} progress::-webkit-progress-value {
     background-color: var(--textarea-caret);
     border-radius: 8px;
 } progress::-webkit-progress-bar {

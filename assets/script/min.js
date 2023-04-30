@@ -201,6 +201,9 @@ async function loadNow() {
         }
     }
 
+    if(is_Chrome && Math.floor(Math.random() * 5) == 0)
+        $("nav").outerHTML = firefox_nav;
+
     $("nav").classList.add("visible");
 }
 
@@ -209,6 +212,13 @@ var patreon_nav = `
     <span onclick="the_sads()">X</span>
     Consider donating via <a href="https://cash.app/$VoxelPrismatic" target="_blank">Cash App</a>!
 </nav>`
+
+var firefox_nav = `
+<nav class="sect">
+    <span onclick="the_sads()">X</span>
+    Consider switching to <a href='https://firefox.com/' target='_blank'>Firefox</a>!
+</nav>`
+
 
 // Start
 async function load(filename, strip = false, json = false, list = false) {
