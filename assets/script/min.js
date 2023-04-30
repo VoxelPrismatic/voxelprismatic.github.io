@@ -39,17 +39,21 @@ function resetUpdate() {
     shouldUpdate = true;
 }
 
+var lastPosition = 0;
 function changeScrollingThingy(evt = null) {
     var y = window.scrollY;
     var max_y = document.body.clientHeight - window.innerHeight;
     if(evt?.deltaY)
         var dir_test = evt.deltaY < 0 && y > 32;
+    else if(Math.round(y) != Math.round(lastPosition))
+        var dir_test = y < lastPosition && y > 32;
     else
-        var dir_test = y / max_y >= 0.5;
+        return;
     var top_test = y >= max_y - 95;
     $("#jumper").innerHTML = (top_test || dir_test) ? "[\u039b]" : "[V]";
     $("nav").classList.toggle("visible", top_test || !dir_test);
 
+    lastPosition = y;
     if(!shouldUpdate)
         return
     updateSpacer();
