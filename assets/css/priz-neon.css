@@ -662,6 +662,8 @@ img[data-src] {
     transform-origin: right;
 } div.vert > img:first-child {
     transform-origin: left;
+} div.vert > img {
+    max-width: calc(50% - var(--sect-padding) / 2);
 }
 
 img.loaded:hover,
