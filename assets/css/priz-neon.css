@@ -69,8 +69,9 @@ body {
     background-color: #111;
 }
 
-body, div:not(#logo), i, b, u, s,
-blockquote, sup, sub, progress {
+body, div:not(#logo, #jumper),
+i, b, u, s, blockquote, sup,
+sub, progress, td {
     transition: none;
 }
 
@@ -583,6 +584,25 @@ table img {
     margin: -10px;
 }
 
+@media screen and (max-width: 580px) {
+    td, th {
+        white-space: nowrap;
+        min-width: 96px;
+        text-align: left;
+    } table {
+        display: block;
+        overflow: auto;
+    } tbody {
+        display: table;
+        width: 100%;
+    }
+    tr:last-child img {
+        transform-origin: bottom right;
+    } tr:nth-child(2) img {
+        transform-origin: top right;
+    }
+}
+
 img[controls] {
     width: 100%;
 }
@@ -615,7 +635,7 @@ progress {
     border-radius: 8px;
     vertical-align: text-bottom;
     height: 12px;
-    width: calc(100% - 60px);
+    width: calc(100% - 54px);
 } progress:last-child {
     width: calc(100% - var(--spacing));
 } progrss + label {
