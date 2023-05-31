@@ -9,7 +9,7 @@ var is_Mobile = /(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|
 // Flicker
 function flickery_element(h) {
     h.classList.add("flicker")
-    for(var x = 500; x <= 2000; x += Math.floor(Math.random() * 150) + 75)
+    for(var x = 500; x <= 2000; x += Math.floor(Math.random() * 300) + 75)
         window.setTimeout((h) => h.classList.toggle("dim"), x, h);
     window.setTimeout((h) => h.classList.remove("flicker"), x + 5, h);
     window.setTimeout((h) => h.classList.add("dim"), x + 1, h);

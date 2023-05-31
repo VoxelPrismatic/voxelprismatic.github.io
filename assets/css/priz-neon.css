@@ -172,7 +172,11 @@ th {
 th:first-child, td:first-child {
     border-left-width: var(--sect-border);
 } tr:last-child td {
-    border-bottom: 2px solid var(--bg);
+    border-bottom: var(--sect-border) solid var(--bg);
+}
+
+tr.hr td {
+    border-bottom: var(--sect-border) solid var(--theme)
 }
 
 /* ---- List elements ----------------------------------------------------------------------------------------------- */
