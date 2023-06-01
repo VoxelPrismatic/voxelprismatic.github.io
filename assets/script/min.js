@@ -160,9 +160,15 @@ async function loadNow() {
             break;
         case 5: // June
             swapColor("cyan");
+            $("#head").innerHTML = `<span class="pride"><i>AMERICAN</i> <i>PRIDE</i> <i>;]</i></span>`;
+            $("#truelogo").src = "/assets/image/webp/holi/priz_pride.webp";
             break;
         case 6: // July
             swapColor("cyan");
+            if(day == 4) {
+                $("#head").innerHTML = `<span class="pride"><i>'MUR</i><i>ICA</i> <i>;]</i></span>`;
+                $("#truelogo").src = "/assets/image/webp/holi/priz_pride.webp";
+            }
             break;
         case 7: // August
             swapColor("cyan");

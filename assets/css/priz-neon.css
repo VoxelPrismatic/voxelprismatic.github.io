@@ -611,6 +611,14 @@ img[controls] {
     width: 100%;
 }
 
+span.pride i:first-child {
+    color: #ff0000;
+} span.pride i:nth-child(2) {
+    color: #ffffff;
+} span.pride i:last-child {
+    color: #4444ff;
+}
+
 /* ---- Photos ------------------------------------------------------------------------------------------------------ */
 div.album img {
     max-width: 100%;
